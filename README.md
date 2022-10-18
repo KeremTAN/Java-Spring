@@ -44,3 +44,12 @@ Some Properties of POJO
 *public void setAge(int age) {  this.age = age;  }*
 *}*</br>
 --------------------------------- </br>
+
+#### Inversion of Control in Briefly; </br>
+When a class uses another class, the class controls the another class.</br>
+For example, the save behavior of an object calls the save behavior of another object which is a component of the object which is created within itself in some situations. </br>
+In some cases, we want to take that control back into our own hands. </br>
+This is the inversion of control.</br>
+There are different solutions to do Inversion of Control.</br>
+However, the most common way to do IoC is usually to inject another object component inside the object by injecting it from outside instead of rendering it inside the object. In this way, we can make the save behavior of any desired object use the save behavior of the object.</br>
+That is called Dependency Injection.</br>
