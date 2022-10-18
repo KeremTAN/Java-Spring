@@ -14,3 +14,33 @@
  * Well-Designed Web Framework.
  * Spring application code tends to be very easy to make test cases for various testings.
  * Middle-tier objects can be easily organized.
+ 
+#### POJO in Briefly;
+It is an ordinary object that is not subject to any special restrictions.
+The POJO class does not have connections with another class, such as extends, implements.
+POJO file does not require any special classpath. It increases the readability and reusability of a Java program.
+
+Some Properties of POJO
+ * The POJO class must be public.
+ * It can have a public default constructor or arguments constructor.
+ * POJO Classes can have any access modifies such as private, public, protected.
+ * A POJO class should not extend predefined classes.
+ * It should not implement prespecified interfaces.
+ * It should not have any prespecified annotation.
+ * All objects must have some public Getters and Setters to access the object values by other Java Programs.
+ 
+ A Code Example of POJO </br>
+--------------------------------- </br>
+*public class Human{*  </br>
+*private String name;*  
+*private String lastName;*  
+*private int age;* 
+
+*public String getName() {  return name;  }*  
+*public void setName(String name) {  this.name = name;  }*  
+*public String getlastName() {   return lastName;  }*  
+*public void setLastName(String lastName) {   this.lastName = lastName;  }*  
+*public int getage() {  return age;  }*  
+*public void setAge(int age) {  this.age = age;  }*
+*}*</br>
+--------------------------------- </br>
