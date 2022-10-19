@@ -49,10 +49,12 @@ Some Properties of POJO
 &nbsp;  When a class uses another class, the class controls the another class.</br>
 For example, the save behavior of an object calls the save behavior of another object which is a component of the object which is created within itself in some situations. </br>
 In some cases, we want to take that control back into our own hands. </br>
-This is the inversion of control.</br>
+This is the inversion of control paradigm.</br>
 There are different solutions to do Inversion of Control.</br>
-However, the most common way to do IoC is usually to inject another object component inside the object by injecting it from outside instead of rendering it inside the object. In this way, we can make the save behavior of any desired object use the save behavior of the object.</br>
-That is called Dependency Injection.</br>
+However, the most common way to do IoC is usually to inject another object component inside the object by injecting it from outside instead of rendering it inside the object. </br>
+In this way, we can set the save behavior of any desired object wanted to use the save behavior of the object.</br>
+That is called Dependency Injection principle.</br>
+Other ideas for implementing the IoC paradigm apart from Dependency Injection are Strategy Design Pattern, Service Lacator Design Pattern and Factory Design Pattern. </br>
 
 #### Spring's IoC Container in Briefly;
 &nbsp;  Some of classes are used to carry data, while some of classes are used for their functionality. </br>
