@@ -76,21 +76,34 @@ This means that DI uses the IoC paradigsm.</br>
  * **Constructor Dependency Injection:** Class needed is provided through the dependency class' constructor. </br>
  --------------------------------- </br>
 *public class Controller{*  </br>
-*private Service service;* </br>
-*public Controller(Service service) {* </br>
+*private IServices service;* </br>
+*public Controller(IServices service) {* </br>
 &nbsp; *this.service=service; }*</br>
 *}* </br>
 --------------------------------- </br>
  * **Property(or Setter) Dependency Injection:** The injector supplies the needed object through a public property of the dependency class. </br>
  --------------------------------- </br>
 *public class Controller{* </br>
-*private Service service;* </br>
+*private IServices service;* </br>
 *public Controller() {}*   </br>
-*public Service getService() {* </br>
+*public IServices getService() {* </br>
 &nbsp; *return this.service; }*</br>
-*public void setService(Service service) {* </br>
+*public void setService(IServices service) {* </br>
 &nbsp; *this.service=service; }*</br>
 *}* </br>
 --------------------------------- </br>
- 
+ * **Interface(or Method) Dependency Injection:** Provides a method that will pass the transmission of the needed object(s) to any dependent class.</br>
+Dependent classes must implement the interface which have the setter method of the object(s) they need.</br>
+ --------------------------------- </br>
+*public interface IServicesDependency{*  </br>
+*void setDependecy(IServices service);*  </br>
+*}*                                      </br>
+*public class Controller implements IServicesDependency{* </br>
+*private IServices service;* </br>
+*public Controller() {}*   </br>
+*@Override*                  </br>
+*public void setDependecy(IServices service) {* </br>
+&nbsp; *this.service=service; }*</br>
+*}* </br>
+--------------------------------- </br>
 
