@@ -73,7 +73,7 @@ Dependency Injection must take  the control of the creating and etc. of objects 
 This means that DI uses the IoC paradigsm.</br>
 
 ##### Injection can be done in 3 different ways in Dependency Injection
- * **Constructor Injection:** Class needed is provided through the dependency class' constructor. </br>
+ * **Constructor Dependency Injection:** Class needed is provided through the dependency class' constructor. </br>
  --------------------------------- </br>
 *public class Controller{*  </br>
 *private Service service;* </br>
@@ -81,4 +81,16 @@ This means that DI uses the IoC paradigsm.</br>
 &nbsp; *this.service=service; }*</br>
 *}* </br>
 --------------------------------- </br>
+ * **Property(or Setter) Dependency Injection:** The injector supplies the needed object through a public property of the dependency class. </br>
+ --------------------------------- </br>
+*public class Controller{* </br>
+*private Service service;* </br>
+*public Controller() {}*   </br>
+*public Service getService() {* </br>
+&nbsp; *return this.service; }*</br>
+*public void setService(Service service) {* </br>
+&nbsp; *this.service=service; }*</br>
+*}* </br>
+--------------------------------- </br>
+ 
 
