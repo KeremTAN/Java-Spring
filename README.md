@@ -66,14 +66,15 @@ In this way, the objects that we want to use for their functionality are not con
 The @Autowired annotation is usually used for the Dependency Injection method in Spring. With the @Autowired annotation, the address of the required object is taken from the memory and a reference is assigned to the required field. </br>
 
 #### Dependency Injection(DI) in Briefly </br>
-Dependency Injection is the last of the principles of S.O.L.I.D. which is the objects needed inject to the dependent object when an object is dependent on another object or objects. </br>
-The main purpose of using DI principle is that objects needed can changed without changing dependent object when the objects needed to be changed. </br>
-Likewise, when a change is made in the objects needed, it is to prevent it from directly affecting dependent object. </br>
-Dependency Injection must take  the control of the creating and etc. of objects needed for being able to do these. </br>
+Dependency Injection is the last of the principles of SOLID. </br>
+Dependency Injection is that needed object(s) inject to the dependent object when an object is dependent on another object(s). </br>
+The main purpose of using DI principle is that needed object(s) can changed without changing dependent object when the needed object(s) to be changed. </br>
+Likewise, when a change is made in the needed object(s), it is to prevent it from directly affecting dependent object. </br>
+Dependency Injection must take the control of the creating and etc. of needed object(s) for being able to do these. </br>
 This means that DI uses the IoC paradigsm.</br>
 
 ##### Injection can be done in 3 different ways in Dependency Injection
- * **Constructor Dependency Injection:** Class needed is provided through the dependency class' constructor. </br>
+ * **Constructor Dependency Injection:** Needed class is provided through the dependency class' constructor. </br>
  --------------------------------- </br>
 *public class Controller{*  </br>
 *private IServices service;* </br>
@@ -81,7 +82,7 @@ This means that DI uses the IoC paradigsm.</br>
 &nbsp; *this.service=service; }*</br>
 *}* </br>
 --------------------------------- </br>
- * **Property(or Setter) Dependency Injection:** The injector supplies the needed object through a public property of the dependency class. </br>
+ * **Property(or Setter) Dependency Injection:** The injector supplies the needed object(s) through a public property of the dependency class. </br>
  --------------------------------- </br>
 *public class Controller{* </br>
 *private IServices service;* </br>
