@@ -15,8 +15,8 @@
  * Spring application code tends to be very easy to make test cases for various testings.
  * Middle-tier objects can be easily organized.
  
-#### POJO in Briefly;
-&nbsp;  It is an ordinary object that is not subject to any special restrictions.
+#### Plain Old Java Object(POJO) in Briefly
+&nbsp;  POJO is an ordinary object that is not subject to any special restrictions.
 The POJO class does not have connections with another class, such as extends, implements.
 POJO file does not require any special classpath. It increases the readability and reusability of a Java program.
 
@@ -45,7 +45,7 @@ Some Properties of POJO
 *}*</br>
 --------------------------------- </br>
 
-#### Inversion of Control(IoC) in Briefly; </br>
+#### Inversion of Control(IoC) in Briefly </br>
 &nbsp;  When a class uses another class, the class controls the another class.</br>
 For example, the save behavior of an object calls the save behavior of another object which is a component of the object which is created within itself in some situations. </br>
 In some cases, we want to take that control back into our own hands. </br>
@@ -56,7 +56,7 @@ In this way, we can set the save behavior of any desired object wanted to use th
 That is called Dependency Injection principle.</br>
 Other ideas for implementing the IoC paradigm apart from Dependency Injection are Strategy Design Pattern, Service Lacator Design Pattern and Factory Design Pattern. </br>
 
-#### Spring's IoC Container in Briefly;
+#### Spring's IoC Container in Briefly
 &nbsp;  Some of classes are used to carry data, while some of classes are used for their functionality. </br>
 It is usually sufficient for us to generate only unique an object from the classes we use for their functionality (in this way, the object generation design is called Singleton Design Pattern). </br>
 IoC container is a kind of memory space in Spring. </br>
@@ -64,4 +64,11 @@ Singleton objects whose functionality we want to use over and over again are pla
 When the objects placed in the IoC Container are desired to be used, a reference is assigned to the relevant field with the Dependency Injection principle.</br>
 In this way, the objects that we want to use for their functionality are not constantly reproduced. </br>
 The @Autowired annotation is usually used for the Dependency Injection method in Spring. With the @Autowired annotation, the address of the required object is taken from the memory and a reference is assigned to the required field. </br>
+
+#### Dependency Injection(DI) </br>
+&nbsp; Dependency Injection is the last of the principles of S.O.L.I.D. which is the objects needed inject to the dependent object when an object is dependent on another object or objects. </br>
+The main purpose of using DI principle is that codes of objects needed can changed without code changing to dependent object when the objects needed to be changed. </br>
+Likewise, when a change is made in the objects needed, it is to prevent it from directly affecting dependent object. </br>
+Dependency Injection must take  the control of the creating and etc. of objects needed for being able to do these. </br>
+This means that DI uses the IoC paradigsm.</br>
 
