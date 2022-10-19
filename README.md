@@ -93,7 +93,7 @@ This means that DI uses the IoC paradigsm.</br>
 &nbsp; *this.service=service; }*</br>
 *}* </br>
 --------------------------------- </br>
- * **Interface(or Method) Dependency Injection:** Provides a method that will pass the transmission of the needed object(s) to any dependent class.</br>
+ * **Interface(or Method) Dependency Injection:** Provides a method that will pass the transmission of the needed object(s) to any dependent class.
 Dependent classes must implement the interface which have the setter method of the object(s) they need.</br>
  --------------------------------- </br>
 *public interface IServicesDependency{*  </br>
@@ -105,6 +105,16 @@ Dependent classes must implement the interface which have the setter method of t
 *@Override*                  </br>
 *public void setDependecy(IServices service) {* </br>
 &nbsp; *this.service=service; }*</br>
+*}* </br>
+--------------------------------- </br>
+ * **[Bonus] Field Dependency Injection:** Field Injection is a DI technique made thanks to the @Autowired annotation in Spring.
+In fact, Field Injection was mentioned indirectly while explaining the IoC Container.
+Dependent object takes the memory address of the needed object that already exists in the IoC and assigns the reference address to  related field belong to dependent object  thanks to @Autowired annotation.</br>
+ --------------------------------- </br>
+*public class Controller{*  </br>
+*@Autowired* </br>
+*private IServices service;* </br>
+*public Controller() {}* </br>
 *}* </br>
 --------------------------------- </br>
 
