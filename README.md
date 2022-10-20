@@ -136,7 +136,7 @@ In this respect, the APIs are like a puzzle.
 Different platforms can connected and meet their needs using their APIs and services.
 This means that APIs allows services and products to communicate with each other and leverage each other's data and functionality through a documented interface. </br>
 
-A few advantages of APIs;
+A few advantages of APIs
  * Centralizing different platforms in one panel.
  * Scattered and large structures can be combined and managed.
  * APIs makes sharing and distributing content easier.
@@ -145,4 +145,12 @@ A few advantages of APIs;
  * APIs makes service delivery more flexible.
  * Different versions of the same application can be developed on many different devices thanks to APIs.
  
+### Representational State Transfer(REST) 
+REST is an architecture that enables lightweight and easy Clint-Server communication with HTTP. </br>
+Roy Fielding developed this architecture as a doctoral thesis in the 2000s.</br>
+REST allows communication with a variable URL rather than a constant URL as in Simple Object Access Protocol (SOAP).</br>
+If you want to get information from the http://theserver/example web address in SOAP, the relevant method should be run on this address.</br>
+For example; GetUsers method</br>
+If you want to get information in Rest, you can directly access the related method with the variable web address logic.</br>
+For example; http://theserver/example/GetUser or http://theserver/example/GetUser/8.</br>
 
