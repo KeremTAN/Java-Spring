@@ -128,5 +128,21 @@ A few features of Spring Boot that make it faster and easier
  * SB aims to reduce LOC (Lines of Code).
  * SB is easy to start.
  * Customization and management is simple.
+ 
+### Application Programming Interface(API)
+&nbsp;  APIs allow the functions of one application to be used in another application.
+In this way, applications can be run that are independent of each other in an integrated way.
+In this respect, the APIs are like a puzzle.
+Different platforms can connected and meet their needs using their APIs and services.
+This means that APIs allows services and products to communicate with each other and leverage each other's data and functionality through a documented interface. </br>
 
+A few advantages of APIs;
+ * Centralizing different platforms in one panel.
+ * Scattered and large structures can be combined and managed.
+ * APIs makes sharing and distributing content easier.
+ * APIs enables the most used content and services to be customizable.
+ * Contents can be automatically broadcast for each channel.
+ * APIs makes service delivery more flexible.
+ * Different versions of the same application can be developed on many different devices thanks to APIs.
+ 
 
