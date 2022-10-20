@@ -118,3 +118,15 @@ Dependent object takes the memory address of the needed object that already exis
 *}* </br>
 --------------------------------- </br>
 
+### Spring Boot
+&nbsp; The main difference between Spring Framework and Spring Boot is that Spring Framework is a library and Spring Boot is a tool.
+Spring Boot makes it faster and easier to develop applications with the Spring Framework. </br></br>
+A few features of Spring Boot that make it faster and easier 
+ * Creates stand-alone applications.
+ * SB comes with Tomcat, Jetty or Undertow embedded.
+ * SB does not need XML configuration.
+ * SB aims to reduce LOC (Lines of Code).
+ * SB is easy to start.
+ * Customization and management is simple.
+
+
