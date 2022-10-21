@@ -154,3 +154,25 @@ For example; GetUsers method</br>
 If you want to get information in Rest, you can directly access the related method with the variable web address logic.</br>
 For example; http://theserver/example/GetUser or http://theserver/example/GetUser/8.</br>
 
+### REST API
+&nbsp; A REST API is an API that conforms to the design principles or representative state transfer architecture style of REST.
+REST APIs are sometimes called RESTful APIs.
+REST APIs is used to get information from a web service or to provide information to a website.
+All communications over the REST API use HTTP request only. </br>
+
+&nbsp; Working paradigm of Rest APIs A request is sent to the server by the client as HTTP POST, GET, PUT, PATCH, DELETE and etc. method were in the form of a web URL. These correspond to create, read, update and delete (or CRUD) operations respectively. After the server receives the request, it sends a like HTML, XML, Image, JSON or etc. recource to the client.</br>
+
+**POST** is mostly used to create new record. Returns HTTP status 201 when successfully created. </br>
+
+**GET** is used to read/get the representation of a record. It returns HTTP status 200 (OK) when secure. It usually returns a status of HTTP 404 (NOT FOUND) or  HTTP 400 (BAD REQUEST) when the event of an error. </br>
+
+**PUT** is used to update but If the record ID is chosen by the client rather than the server, it can also be used to create a record.
+On a successful update, it returns an HTTP status of 200 (or 204 if not returning any content in the body). PUT returns HTTP status 201 on successful a record creation If it is used to create a record. </br>
+
+**PATCH** is used to modify. PATCH request should only contain changes to the record. It should not the entire record.
+This is similar to PUT but the body contains a set of instructions that explain how a record currently on the server must be modified to produce a new version.
+Therefore, PATCH body must not be just a modified part of the record but it must be in some kind of patch language like JSON Patch or XML Patch. </br>
+
+**DELETE** is used by the URI to delete an identified record. It returns a 200 (OK) HTTP status on successful a record deletion.
+
+
