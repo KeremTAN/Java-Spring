@@ -109,7 +109,7 @@ Dependent classes must implement the interface which have the setter method of t
 --------------------------------- </br>
  * **[Bonus] Field Dependency Injection:** Field Injection is a DI technique made thanks to the @Autowired annotation in Spring.
 In fact, Field Injection was mentioned indirectly while explaining the IoC Container.
-Dependent object takes the memory address of the needed object that already exists in the IoC and assigns the reference address to  related field belong to dependent object  thanks to @Autowired annotation.</br>
+Dependent object takes the memory address of the needed object that already exists in the IoC Container and assigns the reference address to  related field belong to dependent object thanks to @Autowired annotation.</br>
  --------------------------------- </br>
 *public class Controller{*  </br>
 *@Autowired* </br>
