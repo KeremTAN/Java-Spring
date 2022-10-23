@@ -129,6 +129,19 @@ A few features of Spring Boot that make it faster and easier
  * SB is easy to start.
  * Customization and management is simple.
  
+ ### Spring Boot Layered Architecture
+&nbsp; This is used architectural structure in Spring Boot.
+In layered artichecture, classes are divided into certain groups/layers and each divided group/layer has its own task.
+The reason why the file structures are arranged in this way is that the reusability, maintainability and debugability of the projects(especially the complex ones) can be controlled and updated in a right way. </br>
+
+The first of these layers is the **Presentation Layer** </br>
+&nbsp; The Presentation Layer communicates with the client. The **@RestController** or **@Controller** annotations are used to indicate that the classes in the Presentation Layer belong to that layer. In this layer, requests(data) from the client are transferred to the next layer(Business Layer) via Database Transfer Objects(DTO) or data which is came from the Business Layer is returned to the client. </br>
+
+The second of these layers is the **Business Layer** </br>
+&nbsp; The Business Layer is the layer where the desired work is done. For example, calculating the discount of the price of the products in the cart, etc. in an e-commerce application.
+The **@Service** anonotation is used to indicate that the classes in the Business Layer belong to this layer.
+The desired solution is produced with the data transferred to it from the Presentation Layer via DTO in the Business layer. If the produced solution is needed to be returned directly to the client, it is returned to the Presentation layer with DTO in this layer. If the produced solution is needed to be saved in the database, it is transferred to the next layer (Persistence Layer) with Entity objects from this layer. </br>
+ 
 ### Application Programming Interface(API)
 &nbsp;  APIs allow the functions of one application to be used in another application.
 In this way, applications can be run that are independent of each other in an integrated way.
