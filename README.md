@@ -143,8 +143,11 @@ The **@Service** anonotation is used to indicate that the classes in the Busines
 The desired solution is produced with the data transferred to it from the Presentation Layer via DTO in the Business layer. If the produced solution is needed to be returned directly to the client, it is returned to the Presentation layer with DTO in this layer. If the produced solution is needed to be saved in the database, it is transferred to the next layer (Persistence Layer) with Entity objects from this layer. </br>
 
 The third of these layers is the **Persistence Layer** </br>
-Persistence Layer communicates with the Database Layer. Hollow interfaces instead of classes are defined in this layer. Interfaces are defined with @Repository annotation in this layer. Spring makes the necessary implementations for the interfaces when it sees @Repository annotation and makes its interfaces with Repository annotation ready for use. Entity objects from the Business Layer are sent to the Database Layer or the data requested from the Database Layer are sent to the Business Layer as Entity objects in this layer. </br>
+&nbsp; Persistence Layer communicates with the Database Layer. Hollow interfaces instead of classes are defined in this layer. Interfaces are defined with **@Repository** annotation in this layer. Spring makes the necessary implementations for the interfaces when it sees **@Repository** annotation and makes its interfaces with Repository annotation ready for use. Entity objects from the Business Layer are sent to the Database Layer or the data requested from the Database Layer are sent to the Business Layer as Entity objects in this layer. </br>
 Persistence Layer and Presentation Layer cannot communicate directly with each other! </br>
+
+**Entity Objects** </br>
+&nbsp; Entity objects are defined with **@Entity** annotation. An Entity class corresponds to a table in database.  For example, an AdminEntity class corresponds to the Admin table in the database. Fields defined with special annotations in Entity classes are created as columns in the database and the values of these fields are added/deleted or etc. to the relevant columns. </br>
 
  
 ### Application Programming Interface(API)
