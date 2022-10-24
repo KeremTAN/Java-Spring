@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task-3/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/models/PersonEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/repositories/PersonRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -111,6 +107,7 @@
       <workItem from="1666617091510" duration="2661000" />
       <workItem from="1666619821391" duration="1531000" />
       <workItem from="1666624648588" duration="3000" />
+      <workItem from="1666642098045" duration="3458000" />
     </task>
     <servers />
   </component>
