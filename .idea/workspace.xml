@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/controllers/PersonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/dto/PersonDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/entity/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/repositories/AddressRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/models/PersonEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/repositories/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/repositories/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3-h2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3-h2/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/target/classes/application.properties" afterDir="false" />
     </list>
@@ -118,6 +112,7 @@
       <workItem from="1666624648588" duration="3000" />
       <workItem from="1666642098045" duration="3893000" />
       <workItem from="1666695331459" duration="12027000" />
+      <workItem from="1666770021893" duration="1620000" />
     </task>
     <servers />
   </component>

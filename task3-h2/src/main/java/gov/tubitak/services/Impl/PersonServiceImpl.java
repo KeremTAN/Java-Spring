@@ -6,7 +6,9 @@ import gov.tubitak.entity.Person;
 import gov.tubitak.repositories.AddressRepository;
 import gov.tubitak.repositories.PersonRepository;
 import gov.tubitak.services.PersonService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,7 +30,6 @@ public class PersonServiceImpl implements PersonService {
         Person person = new Person();
         person.setFirstName(personDto.getFirstName());
         person.setLastName(personDto.getLastName());
-        Assert.isNull(personDto.getFirstName(), "First name is required!");
         final Person personDb = personRepository.save(person);
 
         List<Address> listOfAddress = new ArrayList<>();
@@ -46,8 +47,10 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void delete(Long id) {
-
+    public void deleteById(Long id) {
+        personRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("! The is not user with "+id+" id number"));
+        personRepository.deleteById(id);
     }
 
     @Override
