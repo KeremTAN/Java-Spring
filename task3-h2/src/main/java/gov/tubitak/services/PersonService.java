@@ -12,4 +12,6 @@ public interface PersonService {
     PersonDto update(Long id, PersonDto updatedPerson);
     List<PersonDto> getAll();
     Page<PersonDto> getAll(Pageable pageable);
+
+    PersonDto getById(Long id);
 }

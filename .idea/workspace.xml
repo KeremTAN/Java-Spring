@@ -7,7 +7,6 @@
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/entity/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/PersonService.java" afterDir="false" />
     </list>
@@ -111,7 +110,7 @@
       <workItem from="1666624648588" duration="3000" />
       <workItem from="1666642098045" duration="3893000" />
       <workItem from="1666695331459" duration="12027000" />
-      <workItem from="1666770021893" duration="6937000" />
+      <workItem from="1666770021893" duration="8125000" />
     </task>
     <servers />
   </component>

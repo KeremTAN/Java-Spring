@@ -22,6 +22,10 @@ public class PersonController {
     public ResponseEntity<List<PersonDto>> getAll(){
         return  ResponseEntity.ok(personService.getAll());
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<PersonDto> getById(@PathVariable(value = "id") Long id){
+        return ResponseEntity.ok(personService.getById(id));
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity deleteById(@PathVariable(value = "id") Long id){
         personService.deleteById(id);

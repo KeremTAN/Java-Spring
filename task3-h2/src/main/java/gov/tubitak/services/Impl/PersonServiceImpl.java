@@ -46,24 +46,35 @@ public class PersonServiceImpl implements PersonService {
         personDto.setPersonId(personDb.getPersonId());
         return personDto;
     }
+
     @Override
     @Transactional
     public PersonDto save(PersonDto personDto) {
         Person person = new Person();
         return addToRepository(person, personDto);
     }
-
     @Override
     public void deleteById(Long id) {
         checkIdInRepository(id);
         personRepository.deleteById(id);
     }
-
     @Override
     @Transactional
     public PersonDto update(Long id, PersonDto updatedPerson) {
         Person p = checkIdInRepository(id);
         return addToRepository(p, updatedPerson);
+    }
+
+    @Override
+    public PersonDto getById(Long id) {
+        Person person = checkIdInRepository(id);
+        PersonDto personDto = new PersonDto();
+        personDto.setPersonId(person.getPersonId());
+        personDto.setFirstName(person.getFirstName());
+        personDto.setLastName(person.getLastName());
+        personDto.setAddresses(person.getAddresses().stream().map(Address::getAddress)
+                .collect(Collectors.toList()));
+        return personDto;
     }
 
     @Override
