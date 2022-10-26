@@ -8,6 +8,8 @@ import java.util.List;
 public interface PersonService {
     PersonDto save(PersonDto personDto);
     void deleteById(Long id);
+
+    PersonDto update(Long id, PersonDto updatedPerson);
     List<PersonDto> getAll();
     Page<PersonDto> getAll(Pageable pageable);
 }

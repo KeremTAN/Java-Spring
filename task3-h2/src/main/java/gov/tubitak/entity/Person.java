@@ -28,9 +28,4 @@ public class Person {
     @OneToMany
     @JoinColumn(name = "person_address_id")
     private List<Address> addresses;
-
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 }

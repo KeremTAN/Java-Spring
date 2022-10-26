@@ -8,15 +8,15 @@ import gov.tubitak.repositories.PersonRepository;
 import gov.tubitak.services.PersonService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.Assert;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,10 +24,11 @@ import java.util.stream.Collectors;
 public class PersonServiceImpl implements PersonService {
     private final PersonRepository personRepository;
     private final AddressRepository addressRepository;
-    @Override
-    @Transactional
-    public PersonDto save(PersonDto personDto) {
-        Person person = new Person();
+    private Person checkIdInRepository(Long id){
+        return personRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("! The is not a user with "+id+" id number"));
+    }
+    private PersonDto addToRepository(Person person, PersonDto personDto){
         person.setFirstName(personDto.getFirstName());
         person.setLastName(personDto.getLastName());
         final Person personDb = personRepository.save(person);
@@ -45,12 +46,24 @@ public class PersonServiceImpl implements PersonService {
         personDto.setPersonId(personDb.getPersonId());
         return personDto;
     }
+    @Override
+    @Transactional
+    public PersonDto save(PersonDto personDto) {
+        Person person = new Person();
+        return addToRepository(person, personDto);
+    }
 
     @Override
     public void deleteById(Long id) {
-        personRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("! The is not user with "+id+" id number"));
+        checkIdInRepository(id);
         personRepository.deleteById(id);
+    }
+
+    @Override
+    @Transactional
+    public PersonDto update(Long id, PersonDto updatedPerson) {
+        Person p = checkIdInRepository(id);
+        return addToRepository(p, updatedPerson);
     }
 
     @Override
@@ -67,7 +80,6 @@ public class PersonServiceImpl implements PersonService {
         }
         return peopleDto;
     }
-
     @Override
     public Page<PersonDto> getAll(Pageable pageable) {
         return null;

@@ -22,10 +22,14 @@ public class PersonController {
     public ResponseEntity<List<PersonDto>> getAll(){
         return  ResponseEntity.ok(personService.getAll());
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity deleteById(@PathVariable(value = "id") Long id){
         personService.deleteById(id);
         return ResponseEntity.ok().build();
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<PersonDto> update(@PathVariable(value = "id") Long id, @RequestBody PersonDto updatedPerson){
+        return ResponseEntity.ok(personService.update(id, updatedPerson));
+    }
+
 }
