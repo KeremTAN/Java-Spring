@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="task3-h2" />
         <module name="task-3" />
+        <module name="ChallengeProject" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ChallengeProject" options="-parameters" />
       <module name="task-3" options="-parameters" />
       <module name="task3-h2" options="-parameters" />
     </option>

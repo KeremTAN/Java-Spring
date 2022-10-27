@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PersonController {
     private final PersonService personService;
-
     @PostMapping
     public ResponseEntity<PersonDto> add(@RequestBody PersonDto personDto){
         return ResponseEntity.ok(personService.save(personDto));
@@ -35,5 +34,4 @@ public class PersonController {
     public ResponseEntity<PersonDto> update(@PathVariable(value = "id") Long id, @RequestBody PersonDto updatedPerson){
         return ResponseEntity.ok(personService.update(id, updatedPerson));
     }
-
 }

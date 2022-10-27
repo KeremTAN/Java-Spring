@@ -11,6 +11,7 @@
     <modules>
         <module>task-3</module>
         <module>task3-h2</module>
+        <module>ChallengeProject</module>
     </modules>
 
     <properties>
