@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="RestPull" />
         <module name="task3-h2" />
         <module name="task-3" />
         <module name="ChallengeProject" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ChallengeProject" options="-parameters" />
+      <module name="RestPull" options="-parameters" />
       <module name="task-3" options="-parameters" />
       <module name="task3-h2" options="-parameters" />
     </option>

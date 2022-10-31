@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ChallengeProject</artifactId>
+    <artifactId>RestPull</artifactId>
     <groupId>gov.tubitak</groupId>
     <version>1.0-SNAPSHOT</version>
     <parent>
@@ -13,15 +13,14 @@
         <version>3.0.0-M5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,6 +29,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -79,4 +84,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+
 </project>
