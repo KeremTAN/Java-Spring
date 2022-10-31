@@ -1,5 +1,6 @@
 package gov.tubitak.keremt.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
@@ -21,17 +22,22 @@ public class Stock {
     private String symbol ="IBM";
 
     @Column
+    @JsonProperty("1. open")
     private BigDecimal open;
 
     @Column
+    @JsonProperty("2. high")
     private BigDecimal high;
 
     @Column
+    @JsonProperty("3. low")
     private BigDecimal low;
 
     @Column
+    @JsonProperty("4. close")
     private BigDecimal close;
 
     @Column
+    @JsonProperty("5. volume")
     private BigDecimal volume;
 }

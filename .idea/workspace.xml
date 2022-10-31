@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/ChallengeApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/RestClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestPull/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestPull/src/main/java/RestPullApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/src/main/java/gov/tubitak/services/Impl/PersonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/target/classes/gov/tubitak/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/target/classes/gov/tubitak/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3-h2/target/classes/gov/tubitak/services/Impl/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3-h2/target/classes/gov/tubitak/services/Impl/PersonServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +147,8 @@
       <workItem from="1667046871948" duration="1911000" />
       <workItem from="1667112843373" duration="167000" />
       <workItem from="1667200801935" duration="1731000" />
+      <workItem from="1667202601987" duration="412000" />
+      <workItem from="1667210182081" duration="326000" />
     </task>
     <servers />
   </component>
