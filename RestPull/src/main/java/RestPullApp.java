@@ -28,7 +28,7 @@ public class RestPullApp {
         return ResponseEntity.ok(Objects.requireNonNull(data.getBody()).toString());
     }*/
         try{
-            URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=15min&apikey=YJLNB9RRPZW4L704");
+            URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&interval=15min&apikey=YJLNB9RRPZW4L704");
             HttpURLConnection conn= (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
@@ -53,7 +53,7 @@ public class RestPullApp {
                 /*dataObject.keySet().forEach(item -> {
                     System.out.println(item);
                 });*/
-                System.out.println(dataObject.get("Time Series (15min)"));
+                System.out.println(dataObject.get("Time Series (Daily)"));
             }
         } catch (IOException | ParseException e) {
             throw new RuntimeException(e);
