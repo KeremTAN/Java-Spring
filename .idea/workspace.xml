@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RestPull/src/main/java/gov/tubitak/StockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestPull/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/RestClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/RestClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/RestClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/RestClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestPull/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestPull/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestPull/src/main/java/RestPullApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestPull/src/main/java/gov/tubitak/RestPullApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestPull/target/classes/RestPullApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestPullApp">
+  <component name="RunManager" selected="Spring Boot.ChallengeApp">
     <configuration name="RestPullApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gov.tubitak.RestPullApp" />
       <module name="RestPull" />
@@ -168,6 +164,10 @@
       <workItem from="1667237497850" duration="4218000" />
       <workItem from="1667286494426" duration="766000" />
       <workItem from="1667287882822" duration="1814000" />
+      <workItem from="1667293493256" duration="643000" />
+      <workItem from="1667294426509" duration="1556000" />
+      <workItem from="1667301383421" duration="199000" />
+      <workItem from="1667302574318" duration="4036000" />
     </task>
     <servers />
   </component>
