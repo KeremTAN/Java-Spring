@@ -33,12 +33,12 @@ public class PersonServiceImpl implements PersonService {
 
         List<Address> listOfAddress = new ArrayList<>();
         personDto.getAddresses().forEach(item -> {
-            Address adress = new Address();
-            adress.setAddress(item);
-            adress.setAddressType(Address.AddressType.Other);
-            adress.setIsActive(true);
-            adress.setPerson(personDb);
-            listOfAddress.add(adress);
+            Address address = new Address();
+            address.setAddress(item);
+            address.setAddressType(Address.AddressType.Other);
+            address.setIsActive(true);
+            address.setPerson(personDb);
+            listOfAddress.add(address);
         });
         addressRepository.saveAll(listOfAddress);
         personDto.setPersonId(personDb.getPersonId());

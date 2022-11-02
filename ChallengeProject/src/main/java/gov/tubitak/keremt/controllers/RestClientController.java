@@ -24,7 +24,6 @@ import java.util.List;
 public class RestClientController {
     private final StockRepository stockRepository;
     private final RestTemplate restTemplate;
-
     private static final ObjectMapper mapper = new ObjectMapper();
     private static final StockLoader loader = new StockLoader();
     private static String webUrl=
@@ -47,8 +46,11 @@ public class RestClientController {
     }
     @PostMapping("/save-stock")
     public ResponseEntity<Stock> save(@RequestBody Stock stock){
-        System.out.println(stock);
         return ResponseEntity.ok(stockRepository.save(stock));
+    }
+    @PostMapping("/save-list-stock")
+    public ResponseEntity<Iterable<Stock>> save(@RequestBody List<Stock> listStock){
+        return ResponseEntity.ok(stockRepository.saveAll(listStock));
     }
 
     /**
