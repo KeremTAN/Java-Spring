@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import java.math.BigDecimal;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Getter
+@Setter
+@ToString
 public class StockDto {
-    String symbol = "IBM";
+    String symbol;
 
     @JsonProperty("1. open")
     BigDecimal open;
