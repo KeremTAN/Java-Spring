@@ -1,6 +1,5 @@
 package gov.tubitak.keremt.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;

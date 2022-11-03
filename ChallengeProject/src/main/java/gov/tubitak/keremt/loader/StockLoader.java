@@ -4,7 +4,6 @@ import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.entity.TimeSeriesQueryResult;
 import gov.tubitak.keremt.services.StockService;
 import jakarta.annotation.PostConstruct;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -26,7 +25,6 @@ public class StockLoader {
     public void init(){
         for (String symbol : symbols)
             loadToDB(symbol);
-
     }
     private void loadToDB(String symbol) {
         String webUrl=
