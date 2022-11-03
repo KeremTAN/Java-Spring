@@ -6,7 +6,7 @@ import gov.tubitak.keremt.entity.Stock;
 import gov.tubitak.keremt.repositories.StockRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
+import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,5 +27,20 @@ public class StockService {
     }
     public StockDto getPrices(String symbol, String date){
         return stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date));
+    }
+    public BigDecimal getOpenPrice(String symbol, String date){
+        return getPrices(symbol,date).getOpen();
+    }
+    public BigDecimal getHighPrice(String symbol, String date){
+        return getPrices(symbol,date).getHigh();
+    }
+    public BigDecimal getLowPrice(String symbol, String date){
+        return getPrices(symbol,date).getLow();
+    }
+    public BigDecimal getClosePrice(String symbol, String date){
+        return getPrices(symbol,date).getClose();
+    }
+    public BigDecimal getVolumePrice(String symbol, String date){
+        return getPrices(symbol,date).getVolume();
     }
 }

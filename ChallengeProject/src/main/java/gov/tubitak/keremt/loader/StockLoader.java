@@ -20,7 +20,7 @@ public class StockLoader {
         this.stockService = stockService;
     }
 
-    private final String[] symbols= {"IBM", "AAPL"};
+    private final String[] symbols= {"IBM", "AAPL","TSCO.LON","GPV.TRV","DAI.DEX",};
     @PostConstruct
     public void init(){
         for (String symbol : symbols)
