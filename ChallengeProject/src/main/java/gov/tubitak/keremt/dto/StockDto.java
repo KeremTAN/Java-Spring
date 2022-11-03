@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Setter
 @ToString
 public class StockDto {
-    String symbol;
 
     @JsonProperty("1. open")
     BigDecimal open;

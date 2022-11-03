@@ -19,25 +19,23 @@ public class Stock {
     private Long id;
 
     @Column
-    private String symbol ="IBM";
+    private String date;
 
     @Column
-    @JsonProperty("1. open")
+    private String symbol;
+
+    @Column
     private BigDecimal open;
 
     @Column
-    @JsonProperty("2. high")
     private BigDecimal high;
 
     @Column
-    @JsonProperty("3. low")
     private BigDecimal low;
 
     @Column
-    @JsonProperty("4. close")
     private BigDecimal close;
 
     @Column
-    @JsonProperty("5. volume")
     private BigDecimal volume;
 }
