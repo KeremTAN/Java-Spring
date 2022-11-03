@@ -25,4 +25,7 @@ public class StockService {
             ret.add(stockConverter.convertToStockDto(stock));
         return ret;
     }
+    public StockDto getPrices(String symbol, String date){
+        return stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date));
+    }
 }
