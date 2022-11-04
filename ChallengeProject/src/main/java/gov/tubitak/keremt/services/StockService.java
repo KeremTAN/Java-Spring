@@ -43,4 +43,11 @@ public class StockService {
     public BigDecimal getVolumePrice(String symbol, String date){
         return getPrices(symbol,date).getVolume();
     }
+
+    public boolean isRepositoryEmpty(){
+        return stockRepository.count() == 0;
+    }
+    public void deleteAll(){
+        stockRepository.deleteAll();
+    }
 }

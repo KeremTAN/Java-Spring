@@ -54,4 +54,8 @@ public class StockController {
                                                      @PathVariable(value = "date") String date){
         return ResponseEntity.ok(stockService.getVolumePrice(symbol,date));
     }
+    @DeleteMapping("/del")
+    public void  deleteAll(){
+        stockService.deleteAll();
+    }
 }

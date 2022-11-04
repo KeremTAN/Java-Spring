@@ -1,4 +1,4 @@
-package gov.tubitak.keremt.entity;
+package gov.tubitak.keremt.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import gov.tubitak.keremt.dto.StockDto;
