@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "5b21a272-f98a-4570-97e6-4b70743b916d",
+		"name": "StocksProjectAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24006704"
+	},
+	"item": [
+		{
+			"name": "All-Stocks-Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-Prices-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-Open-Price-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks/open/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"open",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-High-Price-2022-09-06",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/stocks/high/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"high",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-Low-Price-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks/low/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"low",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-Close-Price-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks/close/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"close",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IBM-Volume-Price-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stocks/volume/IBM/2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stocks",
+						"volume",
+						"IBM",
+						"2022-09-06"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
