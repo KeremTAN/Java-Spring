@@ -28,22 +28,20 @@ public class StockService {
     public StockDto getPrices(String symbol, String date){
         return stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date));
     }
-    public BigDecimal getOpenPrice(String symbol, String date){
-        return getPrices(symbol,date).getOpen();
-    }
-    public BigDecimal getHighPrice(String symbol, String date){
-        return getPrices(symbol,date).getHigh();
-    }
-    public BigDecimal getLowPrice(String symbol, String date){
-        return getPrices(symbol,date).getLow();
-    }
-    public BigDecimal getClosePrice(String symbol, String date){
-        return getPrices(symbol,date).getClose();
-    }
-    public BigDecimal getVolumePrice(String symbol, String date){
-        return getPrices(symbol,date).getVolume();
-    }
 
+    public BigDecimal getPrice(String symbol, String date, String type){
+        if (type.equals("open"))
+            return getPrices(symbol,date).getOpen();
+        else if (type.equals("high"))
+            return getPrices(symbol,date).getHigh();
+        else if (type.equals("low"))
+            return getPrices(symbol,date).getLow();
+        else if (type.equals("close"))
+            return getPrices(symbol,date).getClose();
+        else if (type.equals("volume"))
+            return getPrices(symbol,date).getVolume();
+        return BigDecimal.valueOf(-1);
+    }
     public boolean isRepositoryEmpty(){
         return stockRepository.count() == 0;
     }

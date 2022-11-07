@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 @RestController
-@RequestMapping("/stocks")
+@RequestMapping("/v1/api/stocks")
 @RequiredArgsConstructor
 public class StockController {
     private final StockService stockService;
@@ -19,45 +19,26 @@ public class StockController {
                                          @PathVariable(value = "date") String date){
         return ResponseEntity.ok(stockService.save(stock, date, symbol));
     }
-    @GetMapping
-    public ResponseEntity<List<StockDto>> getAll(){
+    @GetMapping()
+    public ResponseEntity<List<StockDto>> getStocks(@RequestParam(required = false) String symbol,
+                                                    @RequestParam(required = false) String date){
+        List<StockDto> ret = new ArrayList<>();
+        if(symbol==null && date==null)
         return ResponseEntity.ok(stockService.getAll());
+        else{
+            ret.add(stockService.getPrices(symbol,date));
+            return ResponseEntity.ok(ret);
+        }
     }
-
-    @GetMapping("/{symbol}/{date}")
-    public ResponseEntity<StockDto> getPrices(@PathVariable(value = "symbol") String symbol,
-                                               @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getPrices(symbol,date));
+    @GetMapping("/price")
+    public ResponseEntity<BigDecimal> getOpenPrice(@RequestParam String symbol,
+                                                   @RequestParam String date,
+                                                   @RequestParam String type){
+        return ResponseEntity.ok(stockService.getPrice(symbol,date,type));
     }
-    @GetMapping("/open/{symbol}/{date}")
-    public ResponseEntity<BigDecimal> getOpenPrice(@PathVariable(value = "symbol") String symbol,
-                                                    @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getOpenPrice(symbol,date));
-    }
-    @GetMapping("/high/{symbol}/{date}")
-    public ResponseEntity<BigDecimal> getHighPrice(@PathVariable(value = "symbol") String symbol,
-                                                    @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getHighPrice(symbol,date));
-    }
-    @GetMapping("/low/{symbol}/{date}")
-    public ResponseEntity<BigDecimal> getLowPrice(@PathVariable(value = "symbol") String symbol,
-                                                    @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getLowPrice(symbol,date));
-    }
-    @GetMapping("/close/{symbol}/{date}")
-    public ResponseEntity<BigDecimal> getClosePrice(@PathVariable(value = "symbol") String symbol,
-                                                    @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getClosePrice(symbol,date));
-    }
-    @GetMapping("/volume/{symbol}/{date}")
-    public ResponseEntity<BigDecimal> getVolumePrice(@PathVariable(value = "symbol") String symbol,
-                                                     @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.getVolumePrice(symbol,date));
-    }
-    /*
     @DeleteMapping("/del")
     public void  deleteAll(){
         stockService.deleteAll();
     }
-    */
+
 }
