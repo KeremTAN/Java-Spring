@@ -19,28 +19,32 @@ public class StockService {
        stockRepository.save(stockConverter.convertToStock(stockDto,date,symbol));
        return stockDto;
     }
-    public List<StockDto> getAll(){
+    /**
+     * If symbol and date are NOT NULL
+     * then it returns a list which has one element.
+     * However, If symbol and date are NULL
+     * then it returns a list which has all elements.
+     */
+    public List<StockDto> getStocks(String symbol, String date){
         List<StockDto> ret = new LinkedList<>();
-        for (Stock stock : stockRepository.findAll())
-            ret.add(stockConverter.convertToStockDto(stock));
+        if (symbol==null && date==null)
+            getAllAsStockDTO(ret);
+        else if (symbol!=null && date!=null) ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
         return ret;
     }
-    public StockDto getPrices(String symbol, String date){
-        return stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date));
+    public void getAllAsStockDTO(List<StockDto> stocks){
+        for (Stock stock : stockRepository.findAll())
+            stocks.add(stockConverter.convertToStockDto(stock));
     }
-
     public BigDecimal getPrice(String symbol, String date, String type){
-        if (type.equals("open"))
-            return getPrices(symbol,date).getOpen();
-        else if (type.equals("high"))
-            return getPrices(symbol,date).getHigh();
-        else if (type.equals("low"))
-            return getPrices(symbol,date).getLow();
-        else if (type.equals("close"))
-            return getPrices(symbol,date).getClose();
-        else if (type.equals("volume"))
-            return getPrices(symbol,date).getVolume();
-        return BigDecimal.valueOf(-1);
+        return switch (type) {
+            case "open" -> getStocks(symbol, date).get(0).getOpen();
+            case "high" -> getStocks(symbol, date).get(0).getHigh();
+            case "low" -> getStocks(symbol, date).get(0).getLow();
+            case "close" -> getStocks(symbol, date).get(0).getClose();
+            case "volume" -> getStocks(symbol, date).get(0).getVolume();
+            default -> BigDecimal.valueOf(-1);
+        };
     }
     public boolean isRepositoryEmpty(){
         return stockRepository.count() == 0;

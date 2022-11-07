@@ -22,13 +22,7 @@ public class StockController {
     @GetMapping()
     public ResponseEntity<List<StockDto>> getStocks(@RequestParam(required = false) String symbol,
                                                     @RequestParam(required = false) String date){
-        List<StockDto> ret = new ArrayList<>();
-        if(symbol==null && date==null)
-        return ResponseEntity.ok(stockService.getAll());
-        else{
-            ret.add(stockService.getPrices(symbol,date));
-            return ResponseEntity.ok(ret);
-        }
+        return ResponseEntity.ok(stockService.getStocks(symbol,date));
     }
     @GetMapping("/price")
     public ResponseEntity<BigDecimal> getOpenPrice(@RequestParam String symbol,
