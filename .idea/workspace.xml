@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/ChallengeApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/TimeSeriesQueryResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/repositories/StockRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/services/StockService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,34 +35,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "897900a33a0409d1c9ac1a34b3e6735b"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;897900a33a0409d1c9ac1a34b3e6735b&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -122,28 +109,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="task3-h2" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="gov.tubitak.App" />
+    <configuration name="StockServiceTest.whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gov.tubitak.*" />
+          <option name="PATTERN" value="gov.tubitak.keremt.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.services" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.services.StockServiceTest" />
+      <option name="METHOD_NAME" value="whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="task-3" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="gov.tubitak.keremt.App" />
+    <configuration name="StockServiceTest.whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gov.tubitak.keremt.*" />
+          <option name="PATTERN" value="gov.tubitak.keremt.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.services" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.services.StockServiceTest" />
+      <option name="METHOD_NAME" value="whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ChallengeApp" />
+        <item itemvalue="JUnit.StockServiceTest.whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" />
+        <item itemvalue="JUnit.StockServiceTest.whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" />
         <item itemvalue="JUnit.StockServiceTest.getStocks" />
         <item itemvalue="Application.RestPullApp" />
-        <item itemvalue="Spring Boot.App (1)" />
-        <item itemvalue="Spring Boot.App" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +217,8 @@
       <workItem from="1667817166453" duration="1417000" />
       <workItem from="1667824171597" duration="3787000" />
       <workItem from="1667838561431" duration="4560000" />
-      <workItem from="1667884704696" duration="15334000" />
+      <workItem from="1667884704696" duration="17000000" />
+      <workItem from="1667907877824" duration="5938000" />
     </task>
     <servers />
   </component>

@@ -34,7 +34,7 @@ public class StockService {
             ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
         else if (symbol!=null)
             stockConverter.convertToAllAsStockDTO(ret, stockRepository.findBySymbol(symbol));
-        else if (date !=null)
+        else
             stockConverter.convertToAllAsStockDTO(ret, stockRepository.findByDate(date));
         return ret;
     }
