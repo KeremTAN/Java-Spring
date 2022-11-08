@@ -6,10 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PostmanCollections/ChallengeProject_Collection_v2.1/StocksProjectAPI.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/PostmanCollections/ChallengeProject_Collection_v2.1/StocksProjectAPI.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/ChallengeApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/TimeSeriesQueryResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/repositories/StockRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/services/StockService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,6 +79,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="gov.tubitak.keremt" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="gov.tubitak.keremt.services" />
@@ -210,7 +224,7 @@
       <workItem from="1667817166453" duration="1417000" />
       <workItem from="1667824171597" duration="3787000" />
       <workItem from="1667838561431" duration="4560000" />
-      <workItem from="1667884704696" duration="12576000" />
+      <workItem from="1667884704696" duration="15334000" />
     </task>
     <servers />
   </component>

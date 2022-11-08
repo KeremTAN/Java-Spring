@@ -45,11 +45,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.8</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
@@ -73,37 +74,40 @@
                 <version>0.8.8</version>
                 <executions>
                     <execution>
-                        <id>default-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+                    <!-- attached to Maven test phase -->
                     <execution>
-                        <id>default-report</id>
+                        <id>report</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
+
                     <execution>
-                        <id>default-check</id>
+                        <id>jacoco-check</id>
                         <goals>
                             <goal>check</goal>
                         </goals>
                         <configuration>
                             <rules>
                                 <rule>
-                                    <element>BUNDLE</element>
+                                    <element>PACKAGE</element>
                                     <limits>
                                         <limit>
-                                            <counter>COMPLEXITY</counter>
+                                            <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.60</minimum>
+                                            <minimum>0.9</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
                             </rules>
                         </configuration>
                     </execution>
+
                 </executions>
             </plugin>
         </plugins>
