@@ -4,6 +4,7 @@ import gov.tubitak.keremt.converter.StockConverter;
 import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.entity.Stock;
 import gov.tubitak.keremt.repositories.StockRepository;
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@EqualsAndHashCode
 public class StockService {
     private final StockRepository stockRepository;
     private final StockConverter stockConverter;
@@ -29,7 +31,8 @@ public class StockService {
         List<StockDto> ret = new LinkedList<>();
         if (symbol==null && date==null)
             getAllAsStockDTO(ret);
-        else if (symbol!=null && date!=null) ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
+        else if (symbol!=null && date!=null)
+            ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
         return ret;
     }
     public void getAllAsStockDTO(List<StockDto> stocks){

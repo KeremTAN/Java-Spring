@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
 public class StockDto {
     String date;
     String symbol;

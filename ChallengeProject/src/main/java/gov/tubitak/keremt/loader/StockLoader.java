@@ -3,7 +3,6 @@ package gov.tubitak.keremt.loader;
 import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.dto.TimeSeriesQueryResult;
 import gov.tubitak.keremt.services.StockService;
-import jakarta.annotation.PostConstruct;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;

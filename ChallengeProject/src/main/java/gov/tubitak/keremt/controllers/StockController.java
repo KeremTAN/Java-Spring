@@ -25,9 +25,9 @@ public class StockController {
         return ResponseEntity.ok(stockService.getStocks(symbol,date));
     }
     @GetMapping("/price")
-    public ResponseEntity<BigDecimal> getOpenPrice(@RequestParam String symbol,
-                                                   @RequestParam String date,
-                                                   @RequestParam String type){
+    public ResponseEntity<BigDecimal> getPrice(@RequestParam String symbol,
+                                               @RequestParam String date,
+                                               @RequestParam String type){
         return ResponseEntity.ok(stockService.getPrice(symbol,date,type));
     }
     @DeleteMapping("/del")
