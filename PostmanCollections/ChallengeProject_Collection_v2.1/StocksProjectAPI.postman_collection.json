@@ -33,7 +33,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/v1/api/stocks?symbol=IBM&date=2022-09-06",
+					"raw": "http://localhost:8081/v1/api/stocks?date=2022-09-06",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -45,10 +45,6 @@
 						"stocks"
 					],
 					"query": [
-						{
-							"key": "symbol",
-							"value": "IBM"
-						},
 						{
 							"key": "date",
 							"value": "2022-09-06"
@@ -244,6 +240,60 @@
 						{
 							"key": "type",
 							"value": "volume"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Stocks-Date-2022-09-06",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/api/stocks?date=2022-09-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"stocks"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-09-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Stocks-IBM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/api/stocks?symbol=IBM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"api",
+						"stocks"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "IBM"
 						}
 					]
 				}

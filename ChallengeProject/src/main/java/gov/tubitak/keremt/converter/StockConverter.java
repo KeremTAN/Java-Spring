@@ -4,7 +4,7 @@ import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.entity.Stock;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
+import java.util.List;
 
 @Component
 public class StockConverter {
@@ -13,5 +13,10 @@ public class StockConverter {
     }
     public StockDto convertToStockDto(Stock stock){
         return new StockDto(stock.getDate(),stock.getSymbol(),stock.getOpen(),stock.getHigh(), stock.getLow(), stock.getClose(),stock.getVolume());
+    }
+
+    public void convertToAllAsStockDTO(List<StockDto> stocks, List<Stock> resource){
+        for (Stock stock : resource)
+            stocks.add(convertToStockDto(stock));
     }
 }

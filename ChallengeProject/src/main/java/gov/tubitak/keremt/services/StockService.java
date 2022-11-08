@@ -2,7 +2,6 @@ package gov.tubitak.keremt.services;
 
 import gov.tubitak.keremt.converter.StockConverter;
 import gov.tubitak.keremt.dto.StockDto;
-import gov.tubitak.keremt.entity.Stock;
 import gov.tubitak.keremt.repositories.StockRepository;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
@@ -30,14 +29,14 @@ public class StockService {
     public List<StockDto> getStocks(String symbol, String date){
         List<StockDto> ret = new LinkedList<>();
         if (symbol==null && date==null)
-            getAllAsStockDTO(ret);
+            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findAll());
         else if (symbol!=null && date!=null)
             ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
+        else if (symbol!=null)
+            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findBySymbol(symbol));
+        else if (date !=null)
+            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findByDate(date));
         return ret;
-    }
-    public void getAllAsStockDTO(List<StockDto> stocks){
-        for (Stock stock : stockRepository.findAll())
-            stocks.add(stockConverter.convertToStockDto(stock));
     }
     public BigDecimal getPrice(String symbol, String date, String type){
         return switch (type) {
