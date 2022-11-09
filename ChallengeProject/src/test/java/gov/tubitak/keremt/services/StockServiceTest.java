@@ -163,6 +163,25 @@ public class StockServiceTest {
      ** GetStocks Method ***
      */
     @Test
+    public void whenGetStocksCalledNullRequest_ReturnsAllElements(){
+        createAllList();
+        when(stockRepository.findAll())
+                .thenReturn(mockStockList);
+        when(stockConverter.convertToAllAsStockDTO(mockStockList))
+                .thenReturn(testStockDTOList);
+        assertEquals(testStockDTOList, service.getStocks(null,null));
+    }
+    @Test
+    public void whenGetStocksCalledSymbolAndDate_ReturnsFirstIBMStockDTO(){
+        testStockDTOList.clear();
+        testStockDTOList.add(testFirstIBMStockDto);
+        when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
+                .thenReturn(mockFirstIBMStock);
+        when(stockConverter.convertToStockDto(mockFirstIBMStock))
+                .thenReturn(testFirstIBMStockDto);
+        assertEquals(testStockDTOList, service.getStocks("IBM","2022-09-06"));
+    }
+    @Test
     public void whenGetStocksCalledWithSymbol_ReturnsIBMList(){
         createIBMList();
         when(stockRepository.findBySymbol("IBM"))
@@ -180,15 +199,7 @@ public class StockServiceTest {
                 .thenReturn(testStockDTOList);
         assertEquals(testStockDTOList, service.getStocks(null,"2022-09-06"));
     }
-    @Test
-    public void whenGetStocksCalledNullRequest_ReturnsAllElements(){
-        createAllList();
-        when(stockRepository.findAll())
-                .thenReturn(mockStockList);
-        when(stockConverter.convertToAllAsStockDTO(mockStockList))
-                .thenReturn(testStockDTOList);
-        assertEquals(testStockDTOList, service.getStocks(null,null));
-    }
+
     /**
      ** Save Method ***
      */

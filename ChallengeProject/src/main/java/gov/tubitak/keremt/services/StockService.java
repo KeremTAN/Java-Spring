@@ -3,7 +3,6 @@ package gov.tubitak.keremt.services;
 import gov.tubitak.keremt.converter.StockConverter;
 import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.repositories.StockRepository;
-import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
