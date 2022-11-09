@@ -28,13 +28,13 @@ public class StockService {
     public List<StockDto> getStocks(String symbol, String date){
         List<StockDto> ret = new LinkedList<>();
         if (symbol==null && date==null)
-            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findAll());
+            ret=stockConverter.convertToAllAsStockDTO(stockRepository.findAll());
         else if (symbol!=null && date!=null)
             ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));
         else if (symbol!=null)
-            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findBySymbol(symbol));
+            ret=stockConverter.convertToAllAsStockDTO(stockRepository.findBySymbol(symbol));
         else
-            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findByDate(date));
+            ret=stockConverter.convertToAllAsStockDTO(stockRepository.findByDate(date));
         return ret;
     }
     public BigDecimal getPrice(String symbol, String date, String type){

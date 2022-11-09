@@ -6,18 +6,62 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/services/StockService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/services/StockService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.controllers/StockController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.controllers/StockController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.controllers/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.controllers/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.converter/StockConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.converter/StockConverter.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.converter/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.converter/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/StockDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/StockDto.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/TimeSeriesQueryResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/TimeSeriesQueryResult.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.dto/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.entity/Stock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.entity/Stock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.entity/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.entity/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.loader/StockLoader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.loader/StockLoader.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.loader/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.loader/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/StockService.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt.services/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt/ChallengeApp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt/ChallengeApp.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/gov.tubitak.keremt/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/branchfc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/branchnc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/branchpc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/bundle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/class.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/down.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/greenbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/method.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/package.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/redbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/report.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/session.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/sort.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/source.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-resources/up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/site/jacoco/jacoco.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/target/surefire-reports/TEST-gov.tubitak.keremt.services.StockServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/surefire-reports/TEST-gov.tubitak.keremt.services.StockServiceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/target/surefire-reports/gov.tubitak.keremt.services.StockServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/surefire-reports/gov.tubitak.keremt.services.StockServiceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/target/test-classes/gov/tubitak/keremt/services/StockServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/test-classes/gov/tubitak/keremt/services/StockServiceTest.class" afterDir="false" />
@@ -233,7 +277,7 @@
       <workItem from="1667884704696" duration="17000000" />
       <workItem from="1667907877824" duration="6404000" />
       <workItem from="1667939616714" duration="364000" />
-      <workItem from="1667970950570" duration="6012000" />
+      <workItem from="1667970950570" duration="7239000" />
     </task>
     <servers />
   </component>

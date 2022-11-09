@@ -12,8 +12,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
-import static org.mockito.Mockito.when;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class StockServiceTest {
@@ -123,15 +124,14 @@ public class StockServiceTest {
         assertTrue(service.isRepositoryEmpty());
     }
 
-    /**
     @Test
     public void whenGetStocksCalledWithSymbol_ReturnsIBMList(){
         createIBMList();
         List<StockDto> check = new LinkedList<>();
         when(stockRepository.findBySymbol("IBM"))
                 .thenReturn(mockStockList);
-        doCallRealMethod().when(stockConverter).convertToAllAsStockDTO(check,mockStockList);
-        Assertions.assertEquals(testStockDTOList, service.getStocks("IBM",null));
-    }*/
+        doCallRealMethod().when(stockConverter).convertToAllAsStockDTO(mockStockList);
+        assertEquals(testStockDTOList, check);
+    }
 
 }

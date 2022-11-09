@@ -4,6 +4,7 @@ import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.entity.Stock;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -15,8 +16,10 @@ public class StockConverter {
         return new StockDto(stock.getDate(),stock.getSymbol(),stock.getOpen(),stock.getHigh(), stock.getLow(), stock.getClose(),stock.getVolume());
     }
 
-    public void convertToAllAsStockDTO(List<StockDto> stocks, List<Stock> resource){
+    public List<StockDto> convertToAllAsStockDTO(List<Stock> resource){
+        List<StockDto> stocks = new ArrayList<>();
         for (Stock stock : resource)
             stocks.add(convertToStockDto(stock));
+        return stocks;
     }
 }
