@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/TryJacoco.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +218,9 @@
       <workItem from="1667824171597" duration="3787000" />
       <workItem from="1667838561431" duration="4560000" />
       <workItem from="1667884704696" duration="17000000" />
-      <workItem from="1667907877824" duration="5938000" />
+      <workItem from="1667907877824" duration="6404000" />
+      <workItem from="1667939616714" duration="364000" />
+      <workItem from="1667970950570" duration="953000" />
     </task>
     <servers />
   </component>

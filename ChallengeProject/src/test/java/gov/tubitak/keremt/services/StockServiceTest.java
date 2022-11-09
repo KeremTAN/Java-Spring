@@ -35,26 +35,47 @@ public class StockServiceTest {
         testValue.add(testStockDto);
     }
 
+
+
+
+    /** GetPrice Method*/
     @Test
     public void whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice(){
         Mockito.when(stockConverter.convertToStockDto(mockStock)).thenReturn(testStockDto);
         Mockito.when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockStock);
-        Assertions.assertEquals(testValue.get(0).getOpen(), service.getPrice("IBM","2022-09-06","open"));
+                                //testValue.get(0).getHigh()
+        Assertions.assertEquals(BigDecimal.valueOf(127.80), service.getPrice("IBM","2022-09-06","open"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypHigh_ReturnsHighPrice(){
         Mockito.when(stockConverter.convertToStockDto(mockStock)).thenReturn(testStockDto);
         Mockito.when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockStock);
-        Assertions.assertEquals(testValue.get(0).getHigh(), service.getPrice("IBM","2022-09-06","high"));
+        Assertions.assertEquals(BigDecimal.valueOf(128.06), service.getPrice("IBM","2022-09-06","high"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypeLow_ReturnsLowPrice(){
         Mockito.when(stockConverter.convertToStockDto(mockStock)).thenReturn(testStockDto);
         Mockito.when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockStock);
-        Assertions.assertEquals(testValue.get(0).getLow(), service.getPrice("IBM","2022-09-06","low"));
+        Assertions.assertEquals(BigDecimal.valueOf(126.30), service.getPrice("IBM","2022-09-06","low"));
+    }
+
+    @Test
+    public void whenGetPriceCalledWithValidRequestTypeClose_ReturnsClosePrice(){
+        Mockito.when(stockConverter.convertToStockDto(mockStock)).thenReturn(testStockDto);
+        Mockito.when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
+                .thenReturn(mockStock);
+        Assertions.assertEquals(BigDecimal.valueOf(126.72), service.getPrice("IBM","2022-09-06","close"));
+    }
+
+    @Test
+    public void whenGetPriceCalledWithValidRequestTypeVolume_ReturnsVolume(){
+        Mockito.when(stockConverter.convertToStockDto(mockStock)).thenReturn(testStockDto);
+        Mockito.when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
+                .thenReturn(mockStock);
+        Assertions.assertEquals(BigDecimal.valueOf(3345343.00), service.getPrice("IBM","2022-09-06","volume"));
     }
 
 
