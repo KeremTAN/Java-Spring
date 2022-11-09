@@ -1,9 +1,9 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 ChallengeProject,gov.tubitak.keremt.dto,TimeSeriesQueryResult,115,0,22,0,3,0,20,0,9,0
-ChallengeProject,gov.tubitak.keremt.dto,StockDto,53,39,0,0,5,6,11,6,11,6
+ChallengeProject,gov.tubitak.keremt.dto,StockDto,190,149,44,18,3,9,40,11,10,10
 ChallengeProject,gov.tubitak.keremt.loader,StockLoader,96,0,6,0,15,0,5,0,2,0
-ChallengeProject,gov.tubitak.keremt.converter,StockConverter,62,0,2,0,7,0,5,0,4,0
-ChallengeProject,gov.tubitak.keremt.entity,Stock,77,27,0,0,11,1,18,1,18,1
+ChallengeProject,gov.tubitak.keremt.converter,StockConverter,0,62,0,2,0,7,0,5,0,4
+ChallengeProject,gov.tubitak.keremt.entity,Stock,217,165,51,19,3,10,46,11,11,11
 ChallengeProject,gov.tubitak.keremt.controllers,StockController,33,0,0,0,6,0,5,0,5,0
 ChallengeProject,gov.tubitak.keremt,ChallengeApp,12,0,0,0,4,0,3,0,3,0
 ChallengeProject,gov.tubitak.keremt.services,StockService,4,140,0,18,2,20,1,16,1,5

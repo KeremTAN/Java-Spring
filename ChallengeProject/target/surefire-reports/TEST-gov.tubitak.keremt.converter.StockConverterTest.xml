@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gov.tubitak.keremt.services.StockServiceTest" time="0.403" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gov.tubitak.keremt.converter.StockConverterTest" time="0.02" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -56,17 +56,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="whenGetPriceCalledWithValidRequestTypeVolume_ReturnsVolume" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.388"/>
-  <testcase name="whenGetStocksCalledSymbolAndDate_ReturnsFirstIBMStockDTO" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenIsRepositoryEmptyCalledWithFullElements_ReturnsFalse" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetStocksCalledWithSymbol_ReturnsIBMList" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" classname="gov.tubitak.keremt.services.StockServiceTest" time="0"/>
-  <testcase name="whenIsRepositoryEmptyCalledWithEmptyElements_ReturnsTrue" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetStocksCalledNullRequest_ReturnsAllElements" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenSaveCalled_ReturnsAllElements" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetPriceCalledWithValidRequestTypeClose_ReturnsClosePrice" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetStocksCalledWithDate_ReturnsDateList" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetPriceCalledWithValidRequestTypeLow_ReturnsLowPrice" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
-  <testcase name="whenGetPriceCalledWithValidRequestTypHigh_ReturnsHighPrice" classname="gov.tubitak.keremt.services.StockServiceTest" time="0.001"/>
+  <testcase name="whenConvertToStockDTOCalledValidRequest_ReturnsStockDTO" classname="gov.tubitak.keremt.converter.StockConverterTest" time="0.011"/>
+  <testcase name="convertToAllAsStockDTOCalledValidRequest_ReturnsAllStockDTO" classname="gov.tubitak.keremt.converter.StockConverterTest" time="0"/>
+  <testcase name="whenConvertToStockCalledValidRequest_ReturnsStock" classname="gov.tubitak.keremt.converter.StockConverterTest" time="0.001"/>
 </testsuite>

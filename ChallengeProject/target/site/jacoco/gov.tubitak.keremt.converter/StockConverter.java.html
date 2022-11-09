@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-<span class="nc" id="L11">public class StockConverter {</span>
+<span class="fc" id="L11">public class StockConverter {</span>
     public Stock convertToStock(StockDto stockDto, String date, String symbol){
-<span class="nc" id="L13">        return new Stock((long) 0.0,date,symbol, stockDto.getOpen(),stockDto.getHigh(), stockDto.getLow(), stockDto.getClose(),stockDto.getVolume());</span>
+<span class="fc" id="L13">        return new Stock((long) 0.0,date,symbol, stockDto.getOpen(),stockDto.getHigh(), stockDto.getLow(), stockDto.getClose(),stockDto.getVolume());</span>
     }
     public StockDto convertToStockDto(Stock stock){
-<span class="nc" id="L16">        return new StockDto(stock.getDate(),stock.getSymbol(),stock.getOpen(),stock.getHigh(), stock.getLow(), stock.getClose(),stock.getVolume());</span>
+<span class="fc" id="L16">        return new StockDto(stock.getDate(),stock.getSymbol(),stock.getOpen(),stock.getHigh(), stock.getLow(), stock.getClose(),stock.getVolume());</span>
     }
 
     public List&lt;StockDto&gt; convertToAllAsStockDTO(List&lt;Stock&gt; resource){
-<span class="nc" id="L20">        List&lt;StockDto&gt; stocks = new ArrayList&lt;&gt;();</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">        for (Stock stock : resource)</span>
-<span class="nc" id="L22">            stocks.add(convertToStockDto(stock));</span>
-<span class="nc" id="L23">        return stocks;</span>
+<span class="fc" id="L20">        List&lt;StockDto&gt; stocks = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        for (Stock stock : resource)</span>
+<span class="fc" id="L22">            stocks.add(convertToStockDto(stock));</span>
+<span class="fc" id="L23">        return stocks;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -25,7 +25,7 @@ public class StockServiceTest {
     MockObjects mObj = new MockObjects();
 
 
-    /*****  TESTS *****/
+    /***** TESTS *****/
 
     /**
      ** GetPrice Method ***
@@ -37,7 +37,7 @@ public class StockServiceTest {
                 .thenReturn(mObj.getTestFirstIBMStockDto());
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mObj.getMockFirstIBMStock());
-                                //testValue.get(0).getHigh()
+        //testValue.get(0).getHigh()
         assertEquals(BigDecimal.valueOf(127.80), service.getPrice("IBM","2022-09-06","open"));
     }
     @Test
@@ -102,7 +102,7 @@ public class StockServiceTest {
         when(stockRepository.count())
                 .thenReturn((long) mObj.getMockStockList().size());
 
-         assertEquals(0,stockRepository.count());
+        assertEquals(0,stockRepository.count());
         assertTrue(service.isRepositoryEmpty());
     }
 

@@ -11,31 +11,32 @@ import java.math.BigDecimal;
 @Getter
 <span class="nc" id="L12">@Setter</span>
 <span class="nc" id="L13">@ToString</span>
+<span class="pc bpc" id="L14" title="51 of 70 branches missed.">@EqualsAndHashCode</span>
 public class Stock {
     @Id
     @SequenceGenerator(name = &quot;seq_person&quot;, allocationSize = 1)
     @GeneratedValue(generator = &quot;seq_person&quot;, strategy = GenerationType.SEQUENCE)
-<span class="nc" id="L18">    private Long id;</span>
+<span class="fc" id="L19">    private Long id;</span>
 
     @Column
-<span class="nc" id="L21">    private String date;</span>
+<span class="fc" id="L22">    private String date;</span>
 
     @Column
-<span class="nc" id="L24">    private String symbol;</span>
+<span class="fc" id="L25">    private String symbol;</span>
 
     @Column
-<span class="nc" id="L27">    private BigDecimal open;</span>
+<span class="fc" id="L28">    private BigDecimal open;</span>
 
     @Column
-<span class="nc" id="L30">    private BigDecimal high;</span>
+<span class="fc" id="L31">    private BigDecimal high;</span>
 
     @Column
-<span class="nc" id="L33">    private BigDecimal low;</span>
+<span class="fc" id="L34">    private BigDecimal low;</span>
 
     @Column
-<span class="nc" id="L36">    private BigDecimal close;</span>
+<span class="fc" id="L37">    private BigDecimal close;</span>
 
     @Column
-<span class="nc" id="L39">    private BigDecimal volume;</span>
+<span class="fc" id="L40">    private BigDecimal volume;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
