@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StockDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ChallengeProject</a> &gt; <a href="index.source.html" class="el_package">gov.tubitak.keremt.dto</a> &gt; <span class="el_source">StockDto.java</span></div><h1>StockDto.java</h1><pre class="source lang-java linenums">package gov.tubitak.keremt.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+import java.math.BigDecimal;
+
+<span class="fc" id="L7">@AllArgsConstructor</span>
+<span class="nc" id="L8">@NoArgsConstructor</span>
+@Getter
+<span class="nc" id="L10">@Setter</span>
+<span class="nc" id="L11">@ToString</span>
+public class StockDto {
+<span class="nc" id="L13">    String date;</span>
+<span class="nc" id="L14">    String symbol;</span>
+    @JsonProperty(&quot;1. open&quot;)
+<span class="fc" id="L16">    BigDecimal open;</span>
+
+    @JsonProperty(&quot;2. high&quot;)
+<span class="fc" id="L19">    BigDecimal high;</span>
+
+    @JsonProperty(&quot;3. low&quot;)
+<span class="fc" id="L22">    BigDecimal low;</span>
+
+    @JsonProperty(&quot;4. close&quot;)
+<span class="fc" id="L25">    BigDecimal close;</span>
+
+    @JsonProperty(&quot;5. volume&quot;)
+<span class="fc" id="L28">    BigDecimal volume;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

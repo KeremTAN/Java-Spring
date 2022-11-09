@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
 public class Stock {
     @Id
     @SequenceGenerator(name = "seq_person", allocationSize = 1)
