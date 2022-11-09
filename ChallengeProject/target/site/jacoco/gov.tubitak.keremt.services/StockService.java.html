@@ -12,13 +12,12 @@ import java.util.List;
 
 @Service
 <span class="fc" id="L14">@RequiredArgsConstructor</span>
-<span class="nc bnc" id="L15" title="All 22 branches missed.">@EqualsAndHashCode</span>
 public class StockService {
     private final StockRepository stockRepository;
     private final StockConverter stockConverter;
     public StockDto save(StockDto stockDto, String date, String symbol){
-<span class="nc" id="L20">       stockRepository.save(stockConverter.convertToStock(stockDto,date,symbol));</span>
-<span class="nc" id="L21">       return stockDto;</span>
+<span class="nc" id="L19">       stockRepository.save(stockConverter.convertToStock(stockDto,date,symbol));</span>
+<span class="nc" id="L20">       return stockDto;</span>
     }
     /**
      * If symbol and date are NOT NULL
@@ -27,32 +26,32 @@ public class StockService {
      * then it returns a list which has all elements.
      */
     public List&lt;StockDto&gt; getStocks(String symbol, String date){
-<span class="fc" id="L30">        List&lt;StockDto&gt; ret = new LinkedList&lt;&gt;();</span>
-<span class="pc bpc" id="L31" title="3 of 4 branches missed.">        if (symbol==null &amp;&amp; date==null)</span>
-<span class="nc" id="L32">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findAll());</span>
-<span class="pc bpc" id="L33" title="2 of 4 branches missed.">        else if (symbol!=null &amp;&amp; date!=null)</span>
-<span class="fc" id="L34">            ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        else if (symbol!=null)</span>
-<span class="nc" id="L36">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findBySymbol(symbol));</span>
+<span class="fc" id="L29">        List&lt;StockDto&gt; ret = new LinkedList&lt;&gt;();</span>
+<span class="pc bpc" id="L30" title="3 of 4 branches missed.">        if (symbol==null &amp;&amp; date==null)</span>
+<span class="nc" id="L31">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findAll());</span>
+<span class="pc bpc" id="L32" title="2 of 4 branches missed.">        else if (symbol!=null &amp;&amp; date!=null)</span>
+<span class="fc" id="L33">            ret.add(stockConverter.convertToStockDto(stockRepository.findBySymbolAndDate(symbol, date)));</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        else if (symbol!=null)</span>
+<span class="nc" id="L35">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findBySymbol(symbol));</span>
         else
-<span class="nc" id="L38">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findByDate(date));</span>
-<span class="fc" id="L39">        return ret;</span>
+<span class="nc" id="L37">            stockConverter.convertToAllAsStockDTO(ret, stockRepository.findByDate(date));</span>
+<span class="fc" id="L38">        return ret;</span>
     }
     public BigDecimal getPrice(String symbol, String date, String type){
-<span class="fc bfc" id="L42" title="All 6 branches covered.">        return switch (type) {</span>
-<span class="fc" id="L43">            case &quot;open&quot; -&gt; getStocks(symbol, date).get(0).getOpen();</span>
-<span class="fc" id="L44">            case &quot;high&quot; -&gt; getStocks(symbol, date).get(0).getHigh();</span>
-<span class="fc" id="L45">            case &quot;low&quot; -&gt; getStocks(symbol, date).get(0).getLow();</span>
-<span class="fc" id="L46">            case &quot;close&quot; -&gt; getStocks(symbol, date).get(0).getClose();</span>
-<span class="fc" id="L47">            case &quot;volume&quot; -&gt; getStocks(symbol, date).get(0).getVolume();</span>
-<span class="fc" id="L48">            default -&gt; BigDecimal.valueOf(-1);</span>
+<span class="fc bfc" id="L41" title="All 6 branches covered.">        return switch (type) {</span>
+<span class="fc" id="L42">            case &quot;open&quot; -&gt; getStocks(symbol, date).get(0).getOpen();</span>
+<span class="fc" id="L43">            case &quot;high&quot; -&gt; getStocks(symbol, date).get(0).getHigh();</span>
+<span class="fc" id="L44">            case &quot;low&quot; -&gt; getStocks(symbol, date).get(0).getLow();</span>
+<span class="fc" id="L45">            case &quot;close&quot; -&gt; getStocks(symbol, date).get(0).getClose();</span>
+<span class="fc" id="L46">            case &quot;volume&quot; -&gt; getStocks(symbol, date).get(0).getVolume();</span>
+<span class="fc" id="L47">            default -&gt; BigDecimal.valueOf(-1);</span>
         };
     }
     public boolean isRepositoryEmpty(){
-<span class="nc bnc" id="L52" title="All 2 branches missed.">        return stockRepository.count() == 0;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        return stockRepository.count() == 0;</span>
     }
     public void deleteAll(){
-<span class="nc" id="L55">        stockRepository.deleteAll();</span>
-<span class="nc" id="L56">    }</span>
+<span class="nc" id="L54">        stockRepository.deleteAll();</span>
+<span class="nc" id="L55">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

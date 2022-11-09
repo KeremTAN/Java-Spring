@@ -6,4 +6,4 @@ ChallengeProject,gov.tubitak.keremt.converter,StockConverter,57,0,2,0,6,0,5,0,4,
 ChallengeProject,gov.tubitak.keremt.entity,Stock,355,27,70,0,12,1,56,1,21,1
 ChallengeProject,gov.tubitak.keremt.controllers,StockController,33,0,0,0,6,0,5,0,5,0
 ChallengeProject,gov.tubitak.keremt,ChallengeApp,12,0,0,0,4,0,3,0,3,0
-ChallengeProject,gov.tubitak.keremt.services,StockService,147,89,31,9,10,13,23,8,6,3
+ChallengeProject,gov.tubitak.keremt.services,StockService,45,99,7,11,8,14,7,10,2,4

@@ -4,7 +4,6 @@ import gov.tubitak.keremt.converter.StockConverter;
 import gov.tubitak.keremt.dto.StockDto;
 import gov.tubitak.keremt.entity.Stock;
 import gov.tubitak.keremt.repositories.StockRepository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -14,6 +13,7 @@ import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 public class StockServiceTest {
@@ -50,7 +50,9 @@ public class StockServiceTest {
         testStockDTOList.clear();
         testStockDTOList.add(testFirstIBMStockDto);
     }
-    /** GetPrice Method*/
+    /**
+     * GetPrice Method
+     */
     @Test
     public void whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice(){
         createFirstIBMStockDTO();
@@ -59,7 +61,7 @@ public class StockServiceTest {
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockFirstIBMStock);
                                 //testValue.get(0).getHigh()
-        Assertions.assertEquals(BigDecimal.valueOf(127.80), service.getPrice("IBM","2022-09-06","open"));
+        assertEquals(BigDecimal.valueOf(127.80), service.getPrice("IBM","2022-09-06","open"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypHigh_ReturnsHighPrice(){
@@ -68,7 +70,7 @@ public class StockServiceTest {
                 .thenReturn(testFirstIBMStockDto);
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockFirstIBMStock);
-        Assertions.assertEquals(BigDecimal.valueOf(128.06), service.getPrice("IBM","2022-09-06","high"));
+        assertEquals(BigDecimal.valueOf(128.06), service.getPrice("IBM","2022-09-06","high"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypeLow_ReturnsLowPrice(){
@@ -77,7 +79,7 @@ public class StockServiceTest {
                 .thenReturn(testFirstIBMStockDto);
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockFirstIBMStock);
-        Assertions.assertEquals(BigDecimal.valueOf(126.30), service.getPrice("IBM","2022-09-06","low"));
+        assertEquals(BigDecimal.valueOf(126.30), service.getPrice("IBM","2022-09-06","low"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypeClose_ReturnsClosePrice(){
@@ -86,7 +88,7 @@ public class StockServiceTest {
                 .thenReturn(testFirstIBMStockDto);
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockFirstIBMStock);
-        Assertions.assertEquals(BigDecimal.valueOf(126.72), service.getPrice("IBM","2022-09-06","close"));
+        assertEquals(BigDecimal.valueOf(126.72), service.getPrice("IBM","2022-09-06","close"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestTypeVolume_ReturnsVolume(){
@@ -95,14 +97,32 @@ public class StockServiceTest {
                 .thenReturn(testFirstIBMStockDto);
         when(stockRepository.findBySymbolAndDate("IBM","2022-09-06"))
                 .thenReturn(mockFirstIBMStock);
-        Assertions.assertEquals(BigDecimal.valueOf(3345343.00), service.getPrice("IBM","2022-09-06","volume"));
+        assertEquals(BigDecimal.valueOf(3345343.00), service.getPrice("IBM","2022-09-06","volume"));
     }
     @Test
     public void whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1(){
 
         BigDecimal expectedValue = BigDecimal.valueOf(-1);
-        Assertions.assertEquals(expectedValue, service.getPrice("IBM","2022-09-06","none"));
+        assertEquals(expectedValue, service.getPrice("IBM","2022-09-06","none"));
     }
+    /**
+     * IsRepositoryEmpty Method
+     */
+    @Test
+    public void whenIsRepositoryEmptyCalledWithFullElements_ReturnsFalse(){
+        createIBMList();
+        when(stockRepository.count()).thenReturn((long) mockStockList.size());
+        assertEquals(2,stockRepository.count());
+        assertFalse(service.isRepositoryEmpty());
+    }
+    @Test
+    public void whenIsRepositoryEmptyCalledWithEmptyElements_ReturnsTrue(){
+        mockStockList.clear();
+        when(stockRepository.count()).thenReturn((long) mockStockList.size());
+         assertEquals(0,stockRepository.count());
+        assertTrue(service.isRepositoryEmpty());
+    }
+
     /**
     @Test
     public void whenGetStocksCalledWithSymbol_ReturnsIBMList(){
@@ -113,4 +133,5 @@ public class StockServiceTest {
         doCallRealMethod().when(stockConverter).convertToAllAsStockDTO(check,mockStockList);
         Assertions.assertEquals(testStockDTOList, service.getStocks("IBM",null));
     }*/
+
 }

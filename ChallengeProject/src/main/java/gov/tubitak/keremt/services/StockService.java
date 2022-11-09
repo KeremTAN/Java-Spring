@@ -12,7 +12,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@EqualsAndHashCode
 public class StockService {
     private final StockRepository stockRepository;
     private final StockConverter stockConverter;
