@@ -1,9 +1,0 @@
-gov/tubitak/keremt/repositories/StockRepository.class
-gov/tubitak/keremt/converter/StockConverter.class
-gov/tubitak/keremt/ChallengeApp.class
-gov/tubitak/keremt/controllers/StockController.class
-gov/tubitak/keremt/dto/TimeSeriesQueryResult.class
-gov/tubitak/keremt/services/StockService.class
-gov/tubitak/keremt/entity/Stock.class
-gov/tubitak/keremt/dto/StockDto.class
-gov/tubitak/keremt/loader/StockLoader.class

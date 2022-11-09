@@ -26,12 +26,19 @@ public class StockServiceTest {
     private StockConverter stockConverter;
     List<StockDto> testStockDTOList =new LinkedList<>();
     List<Stock> mockStockList =new LinkedList<>();
+
+    /** TEST STOCKDTO OBJECTS **/
     StockDto testFirstIBMStockDto =new StockDto("2022-09-06","IBM",
             BigDecimal.valueOf(127.80),BigDecimal.valueOf(128.06),BigDecimal.valueOf(126.30),
             BigDecimal.valueOf(126.72), BigDecimal.valueOf(3345343.00));
     StockDto testSecondIBMStockDto =new StockDto("2022-08-31","IBM",
             BigDecimal.valueOf(129.92),BigDecimal.valueOf(130.00),BigDecimal.valueOf(128.40),
             BigDecimal.valueOf(128.45), BigDecimal.valueOf(3490380.00));
+    StockDto testThirdAAPLStockDto =new StockDto("2022-09-06","AAPL",
+            BigDecimal.valueOf(156.47),BigDecimal.valueOf(157.07),BigDecimal.valueOf(154.53),
+            BigDecimal.valueOf(128.45), BigDecimal.valueOf(73295539.00));
+
+    /** MOCK STOCK OBJECTS **/
     Stock mockFirstIBMStock =new Stock(1L,"2022-09-06","IBM",
             BigDecimal.valueOf(127.80),BigDecimal.valueOf(128.06),BigDecimal.valueOf(126.30),
             BigDecimal.valueOf(126.72), BigDecimal.valueOf(3345343.00));
@@ -39,6 +46,15 @@ public class StockServiceTest {
             BigDecimal.valueOf(129.92),BigDecimal.valueOf(130.00),BigDecimal.valueOf(128.40),
             BigDecimal.valueOf(128.45), BigDecimal.valueOf(3490380.00));
 
+    Stock mockThirdAAPLStock =new Stock(3L,"2022-09-06","AAPL",
+            BigDecimal.valueOf(156.47),BigDecimal.valueOf(157.07),BigDecimal.valueOf(154.53),
+            BigDecimal.valueOf(128.45), BigDecimal.valueOf(73295539.00));
+
+    /** CREATE LISTS **/
+    private void createFirstIBMStockDTO(){
+        testStockDTOList.clear();
+        testStockDTOList.add(testFirstIBMStockDto);
+    }
     private void createIBMList(){
         testStockDTOList.clear();
         testStockDTOList.add(testFirstIBMStockDto);
@@ -47,12 +63,30 @@ public class StockServiceTest {
         mockStockList.add(mockFirstIBMStock);
         mockStockList.add(mockSecondIBMStock);
     }
-    private void createFirstIBMStockDTO(){
+    private void createDateList(){
         testStockDTOList.clear();
         testStockDTOList.add(testFirstIBMStockDto);
+        testStockDTOList.add(testThirdAAPLStockDto);
+        mockStockList.clear();
+        mockStockList.add(mockFirstIBMStock);
+        mockStockList.add(mockSecondIBMStock);
     }
+    private void createAllList() {
+        testStockDTOList.clear();
+        testStockDTOList.add(testFirstIBMStockDto);
+        testStockDTOList.add(testSecondIBMStockDto);
+        testStockDTOList.add(testThirdAAPLStockDto);
+        mockStockList.clear();
+        mockStockList.add(mockFirstIBMStock);
+        mockStockList.add(mockSecondIBMStock);
+        mockStockList.add(mockSecondIBMStock);
+    }
+
+
+    /*****  TESTS *****/
+
     /**
-     * GetPrice Method
+     ** GetPrice Method ***
      */
     @Test
     public void whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice(){
@@ -106,8 +140,9 @@ public class StockServiceTest {
         BigDecimal expectedValue = BigDecimal.valueOf(-1);
         assertEquals(expectedValue, service.getPrice("IBM","2022-09-06","none"));
     }
+
     /**
-     * IsRepositoryEmpty Method
+     ** IsRepositoryEmpty Method ***
      */
     @Test
     public void whenIsRepositoryEmptyCalledWithFullElements_ReturnsFalse(){
@@ -124,14 +159,43 @@ public class StockServiceTest {
         assertTrue(service.isRepositoryEmpty());
     }
 
+    /**
+     ** GetStocks Method ***
+     */
     @Test
     public void whenGetStocksCalledWithSymbol_ReturnsIBMList(){
         createIBMList();
-        List<StockDto> check = new LinkedList<>();
         when(stockRepository.findBySymbol("IBM"))
                 .thenReturn(mockStockList);
-        doCallRealMethod().when(stockConverter).convertToAllAsStockDTO(mockStockList);
-        assertEquals(testStockDTOList, check);
+        when(stockConverter.convertToAllAsStockDTO(mockStockList))
+                .thenReturn(testStockDTOList);
+        assertEquals(testStockDTOList, service.getStocks("IBM",null));
     }
-
+    @Test
+    public void whenGetStocksCalledWithDate_ReturnsDateList(){
+        createDateList();
+        when(stockRepository.findByDate("2022-09-06"))
+                .thenReturn(mockStockList);
+        when(stockConverter.convertToAllAsStockDTO(mockStockList))
+                .thenReturn(testStockDTOList);
+        assertEquals(testStockDTOList, service.getStocks(null,"2022-09-06"));
+    }
+    @Test
+    public void whenGetStocksCalledNullRequest_ReturnsAllElements(){
+        createAllList();
+        when(stockRepository.findAll())
+                .thenReturn(mockStockList);
+        when(stockConverter.convertToAllAsStockDTO(mockStockList))
+                .thenReturn(testStockDTOList);
+        assertEquals(testStockDTOList, service.getStocks(null,null));
+    }
+    /**
+     ** Save Method ***
+     */
+    @Test
+    public void whenSaveCalled_ReturnsAllElements(){
+        when(stockConverter.convertToStock(testFirstIBMStockDto,"2022-09-06","IBM"))
+                .thenReturn(mockFirstIBMStock);
+        assertEquals(testFirstIBMStockDto,service.save(testFirstIBMStockDto,"2022-09-06","IBM"));
+    }
 }
