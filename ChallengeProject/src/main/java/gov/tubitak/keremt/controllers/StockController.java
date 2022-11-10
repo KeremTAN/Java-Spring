@@ -13,11 +13,11 @@ import java.util.*;
 @RequiredArgsConstructor
 public class StockController {
     private final StockService stockService;
-    @PostMapping("/{symbol}/{date}")
-    public ResponseEntity<StockDto> save(@RequestBody StockDto stock,
-                                         @PathVariable(value = "symbol") String symbol,
-                                         @PathVariable(value = "date") String date){
-        return ResponseEntity.ok(stockService.save(stock, date, symbol));
+    @PostMapping
+    public ResponseEntity<StockDto> save(@RequestBody StockDto stockDto,
+                                         @RequestParam String symbol,
+                                         @RequestParam String date){
+        return ResponseEntity.ok(stockService.save(stockDto, date, symbol));
     }
     @GetMapping()
     public ResponseEntity<List<StockDto>> getStocks(@RequestParam(required = false) String symbol,
