@@ -1,9 +1,0 @@
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/ChallengeApp.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/repositories/StockRepository.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/TimeSeriesQueryResult.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java
-/Users/kerem/Desktop/Codes/Spring-Projects/Spring_JAVA/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java

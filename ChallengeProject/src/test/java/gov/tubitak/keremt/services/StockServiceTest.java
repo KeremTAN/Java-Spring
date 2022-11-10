@@ -153,10 +153,14 @@ public class StockServiceTest {
      ** Save Method ***
      */
     @Test
-    public void whenSaveCalled_ReturnsAllElements(){
+    public void whenSaveCalledWithValidRequest_ReturnsAllElements(){
         when(stockConverter.convertToStock(mObj.getTestFirstIBMStockDto(),"2022-09-06","IBM"))
                 .thenReturn(mObj.getMockFirstIBMStock());
         assertEquals(mObj.getTestFirstIBMStockDto(),
                 service.save(mObj.getTestFirstIBMStockDto(),"2022-09-06","IBM"));
+    }
+    @Test
+    public void whenSaveCalledWithInValidRequest_ReturnsNull(){
+        assertNull(service.save(mObj.getTestFirstIBMStockDto(), null, null));
     }
 }

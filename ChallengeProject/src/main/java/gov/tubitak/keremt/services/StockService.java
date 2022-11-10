@@ -15,8 +15,11 @@ public class StockService {
     private final StockRepository stockRepository;
     private final StockConverter stockConverter;
     public StockDto save(StockDto stockDto, String date, String symbol){
-       stockRepository.save(stockConverter.convertToStock(stockDto,date,symbol));
-       return stockDto;
+       if (date!=null && symbol != null) {
+           stockRepository.save(stockConverter.convertToStock(stockDto, date, symbol));
+           return stockDto;
+       }
+       else return null;
     }
     /**
      * If symbol and date are NOT NULL

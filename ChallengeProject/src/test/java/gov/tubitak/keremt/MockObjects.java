@@ -67,7 +67,7 @@ public class MockObjects {
         mockStockList.clear();
         mockStockList.add(mockFirstIBMStock);
         mockStockList.add(mockSecondIBMStock);
-        mockStockList.add(mockSecondIBMStock);
+        mockStockList.add(mockThirdAAPLStock);
     }
 
 }
