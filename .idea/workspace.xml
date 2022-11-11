@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/controllers/StockControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/controllers/StockControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,8 @@
       <workItem from="1668069325874" duration="9351000" />
       <workItem from="1668096242275" duration="656000" />
       <workItem from="1668111151901" duration="775000" />
-      <workItem from="1668166410414" duration="594000" />
+      <workItem from="1668166410414" duration="1557000" />
+      <workItem from="1668191071456" duration="14614000" />
     </task>
     <servers />
   </component>
