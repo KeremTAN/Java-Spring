@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -160,5 +161,14 @@ class StockControllerTest {
                 ResponseEntity.ok(null),
                 controller.save(null,"IBM","2022-09-6")
         );
+    }
+
+    /**
+     ** Delete Method ***
+     */
+    @Test
+    public void whenDeleteAllCalled_(){
+        doNothing().when(service).deleteAll();
+        controller.deleteAll();
     }
 }

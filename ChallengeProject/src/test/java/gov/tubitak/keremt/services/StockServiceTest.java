@@ -163,4 +163,13 @@ public class StockServiceTest {
     public void whenSaveCalledWithInValidRequest_ReturnsNull(){
         assertNull(service.save(mObj.getTestFirstIBMStockDto(), null, null));
     }
+
+    /**
+     ** Delete Method ***
+     */
+    @Test
+    public void whenDeleteAllCalled_(){
+        doNothing().when(stockRepository).deleteAll();
+        service.deleteAll();
+    }
 }

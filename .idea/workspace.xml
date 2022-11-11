@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/controllers/StockControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/services/StockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/controllers/StockControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/controllers/StockControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/services/StockServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +226,10 @@
       <workItem from="1667970950570" duration="11244000" />
       <workItem from="1667988591949" duration="7809000" />
       <workItem from="1668028596702" duration="799000" />
-      <workItem from="1668069325874" duration="8973000" />
+      <workItem from="1668069325874" duration="9351000" />
+      <workItem from="1668096242275" duration="656000" />
+      <workItem from="1668111151901" duration="775000" />
+      <workItem from="1668166410414" duration="594000" />
     </task>
     <servers />
   </component>
