@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +71,10 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="gov.tubitak.keremt.dto" />
+      <recent name="gov.tubitak.keremt.entity" />
       <recent name="gov.tubitak.keremt.controllers" />
       <recent name="gov.tubitak.keremt.converter" />
       <recent name="gov.tubitak.keremt.services" />
-      <recent name="gov.tubitak.keremt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="gov.tubitak" />
@@ -87,57 +87,66 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ChallengeApp">
-    <configuration name="RestPullApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gov.tubitak.RestPullApp" />
-      <module name="RestPull" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StockServiceTest.getStocks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StockTest.testToString">
+    <configuration name="StockDtoTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gov.tubitak.keremt.services.*" />
+          <option name="PATTERN" value="gov.tubitak.keremt.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.services" />
-      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.services.StockServiceTest" />
-      <option name="METHOD_NAME" value="getStocks" />
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.dto" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.dto.StockDtoTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StockServiceTest.whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StockTest.testSetDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gov.tubitak.keremt.services.*" />
+          <option name="PATTERN" value="gov.tubitak.keremt.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.services" />
-      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.services.StockServiceTest" />
-      <option name="METHOD_NAME" value="whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" />
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.entity" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.entity.StockTest" />
+      <option name="METHOD_NAME" value="testSetDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StockServiceTest.whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StockTest.testSetId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gov.tubitak.keremt.services.*" />
+          <option name="PATTERN" value="gov.tubitak.keremt.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.services" />
-      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.services.StockServiceTest" />
-      <option name="METHOD_NAME" value="whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" />
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.entity" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.entity.StockTest" />
+      <option name="METHOD_NAME" value="testSetId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StockTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChallengeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gov.tubitak.keremt.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.entity" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.entity.StockTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StockTest.testToString" />
+        <item itemvalue="JUnit.StockDtoTest.testToString" />
+        <item itemvalue="JUnit.StockTest.testSetId" />
+        <item itemvalue="JUnit.StockTest.testSetDate" />
         <item itemvalue="Spring Boot.ChallengeApp" />
-        <item itemvalue="JUnit.StockServiceTest.whenGetPriceCalledWithValidRequestTypeOpen_ReturnsOpenPrice" />
-        <item itemvalue="JUnit.StockServiceTest.whenGetPriceCalledWithValidRequestInValidType_ReturnsMinus1" />
-        <item itemvalue="JUnit.StockServiceTest.getStocks" />
-        <item itemvalue="Application.RestPullApp" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +238,9 @@
       <workItem from="1668096242275" duration="656000" />
       <workItem from="1668111151901" duration="775000" />
       <workItem from="1668166410414" duration="1557000" />
-      <workItem from="1668191071456" duration="14614000" />
+      <workItem from="1668191071456" duration="14898000" />
+      <workItem from="1668242678216" duration="1426000" />
+      <workItem from="1668253736222" duration="2843000" />
     </task>
     <servers />
   </component>
