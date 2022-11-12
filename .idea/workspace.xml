@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StockTest.testToString">
+  <component name="RunManager" selected="Spring Boot.ChallengeApp">
     <configuration name="StockDtoTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
@@ -174,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ChallengeApp" />
         <item itemvalue="JUnit.StockTest.testToString" />
         <item itemvalue="JUnit.StockDtoTest.testToString" />
         <item itemvalue="JUnit.StockTest.testSetId" />
         <item itemvalue="JUnit.StockTest.testSetDate" />
-        <item itemvalue="Spring Boot.ChallengeApp" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +240,9 @@
       <workItem from="1668166410414" duration="1557000" />
       <workItem from="1668191071456" duration="14898000" />
       <workItem from="1668242678216" duration="1426000" />
-      <workItem from="1668253736222" duration="2843000" />
+      <workItem from="1668253736222" duration="4293000" />
+      <workItem from="1668279195412" duration="3424000" />
+      <workItem from="1668285294699" duration="435000" />
     </task>
     <servers />
   </component>
@@ -267,5 +269,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="webUrl" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
