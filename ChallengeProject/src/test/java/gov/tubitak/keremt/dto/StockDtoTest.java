@@ -55,9 +55,10 @@ class StockDtoTest {
 
     @Test
     void testToString() {
-        String s = "StockDto(date=2022-09-06, symbol=IBM, open=127.8, high=128.06, low=126.3, close=126.72, volume=3345343.0)";
+        String s =
+                "StockDto(date=2022-09-06, symbol=IBM, open=127.8, high=128.06," +
+                " low=126.3, close=126.72, adjusted_close=11, volume=3345343.0)";
         assertEquals(s, stockDto.toString());
-
     }
 
 }

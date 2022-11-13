@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/MockObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/MockObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/dto/StockDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/dto/StockDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/entity/StockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/test/java/gov/tubitak/keremt/entity/StockTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +90,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ChallengeApp">
+    <configuration name="StockConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChallengeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gov.tubitak.keremt.converter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.converter" />
+      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.converter.StockConverterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StockDtoTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
@@ -113,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StockTest.testSetDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChallengeProject" />
       <extension name="coverage">
         <pattern>
@@ -123,24 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="gov.tubitak.keremt.entity" />
       <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.entity.StockTest" />
-      <option name="METHOD_NAME" value="testSetDate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StockTest.testSetId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChallengeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gov.tubitak.keremt.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="gov.tubitak.keremt.entity" />
-      <option name="MAIN_CLASS_NAME" value="gov.tubitak.keremt.entity.StockTest" />
-      <option name="METHOD_NAME" value="testSetId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,9 +176,9 @@
       <list>
         <item itemvalue="Spring Boot.ChallengeApp" />
         <item itemvalue="JUnit.StockTest.testToString" />
+        <item itemvalue="JUnit.StockTest" />
         <item itemvalue="JUnit.StockDtoTest.testToString" />
-        <item itemvalue="JUnit.StockTest.testSetId" />
-        <item itemvalue="JUnit.StockTest.testSetDate" />
+        <item itemvalue="JUnit.StockConverterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +246,7 @@
       <workItem from="1668286894971" duration="1180000" />
       <workItem from="1668293023391" duration="889000" />
       <workItem from="1668333550123" duration="153000" />
-      <workItem from="1668365047899" duration="3354000" />
+      <workItem from="1668365047899" duration="4024000" />
     </task>
     <servers />
   </component>
