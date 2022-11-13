@@ -37,5 +37,8 @@ public class Stock {
     private BigDecimal close;
 
     @Column
+    private BigDecimal adjusted_close;
+
+    @Column
     private BigDecimal volume;
 }

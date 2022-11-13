@@ -25,6 +25,9 @@ public class StockDto {
     @JsonProperty("4. close")
     BigDecimal close;
 
-    @JsonProperty("5. volume")
+    @JsonProperty("5. adjusted close")
+    BigDecimal adjusted_close;
+
+    @JsonProperty("6. volume")
     BigDecimal volume;
 }

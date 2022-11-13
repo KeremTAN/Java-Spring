@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 @RestController
-@RequestMapping("/v1/api/stocks")
+@RequestMapping("/v2/api/stocks")
 @RequiredArgsConstructor
 public class StockController {
     private final StockService stockService;

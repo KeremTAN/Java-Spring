@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ea5f1c-fd6e-46e6-b9ee-9dfed531f45c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/controllers/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/converter/StockConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/dto/StockDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/entity/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/src/main/java/gov/tubitak/keremt/loader/StockLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/controllers/StockController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/converter/StockConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/dto/StockDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/entity/Stock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChallengeProject/target/classes/gov/tubitak/keremt/loader/StockLoader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,6 +252,10 @@
       <workItem from="1668253736222" duration="4293000" />
       <workItem from="1668279195412" duration="3424000" />
       <workItem from="1668285294699" duration="435000" />
+      <workItem from="1668286894971" duration="1180000" />
+      <workItem from="1668293023391" duration="889000" />
+      <workItem from="1668333550123" duration="153000" />
+      <workItem from="1668365047899" duration="3354000" />
     </task>
     <servers />
   </component>
