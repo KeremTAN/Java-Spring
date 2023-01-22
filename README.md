@@ -54,7 +54,7 @@ Some Properties of POJO
  * All objects must have some public Getters and Setters to access the object values by other Java Programs.
  
  A Code Example of POJO </br>
---------------------------------- </br>
+
 ```java
 public class Human{
     private String name; 
@@ -69,7 +69,7 @@ public class Human{
     public void setAge(int age) {  this.age = age;  }
 }
 ```
---------------------------------- </br>
+---------------------------------
 
 <a name="ioc"></a>
 
@@ -109,7 +109,7 @@ This means that DI uses the IoC paradigsm.</br>
 <a name="dic"></a>
 
  * **Constructor Dependency Injection:** Needed class is provided through the dependency class' constructor. </br>
- --------------------------------- </br>
+
  ```java
 public class Controller{
     private IServices service;
@@ -118,11 +118,11 @@ public class Controller{
     }
 }
 ```
---------------------------------- </br>
+ --------------------------------- 
 <a name="dip"></a>
 
  * **Property(or Setter) Dependency Injection:** The injector supplies the needed object(s) through a public property of the dependency class. </br>
- --------------------------------- </br>
+
  ```java
 public class Controller{
     private IServices service;
@@ -137,12 +137,12 @@ public class Controller{
     }
 }
 ```
---------------------------------- </br>
+ --------------------------------- 
 <a name="dii"></a>
 
  * **Interface(or Method) Dependency Injection:** Provides a method that will pass the transmission of the needed object(s) to any dependent class.
 Dependent classes must implement the interface which have the setter method of the object(s) they need.</br>
- --------------------------------- </br>
+
  ```java
 public interface IServicesDependency{
     void setDependecy(IServices service);
@@ -158,13 +158,13 @@ public class Controller implements IServicesDependency{
     }
 }
 ```
---------------------------------- </br>
+ ---------------------------------
 <a name="dif"></a>
 
  * **[Bonus] Field Dependency Injection:** Field Injection is a DI technique made thanks to the @Autowired annotation in Spring.
 In fact, Field Injection was mentioned indirectly while explaining the IoC Container.
 Dependent object takes the memory address of the needed object that already exists in the IoC Container and assigns the reference address to  related field belong to dependent object thanks to @Autowired annotation.</br>
- --------------------------------- </br>
+
 ```java
 public class Controller{
     @Autowired
@@ -172,7 +172,7 @@ public class Controller{
     public Controller() {}
 }
 ```
---------------------------------- </br>
+ --------------------------------- 
 <a name="springboot"></a>
 
 ### Spring Boot
