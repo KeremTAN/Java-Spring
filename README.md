@@ -1,3 +1,25 @@
+<!-- Lists -->
+* [Spring Framework](#springframework)
+    * [The brief reasons why the Spring Framework is so popular and used are;](#why)
+        * [Plain Old Java Object(POJO) in Briefly](#pojo)
+        * [Inversion of Control(IoC) in Briefly](#ioc)
+        * [Spring's IoC Container in Briefly](#sioc)
+        * [Dependency Injection(DI) in Briefly](#di)
+            1. [Constructor Dependency Injection](#dic)
+            2. [Property(or Setter) Dependency Injection](#dip)
+            3. [Interface(or Method) Dependency Injection](#dii)
+            4. [[Bonus] Field Dependency Injection](#dif)
+* [Spring Boot](#springboot)
+    * [Spring Boot Layered Architecture](#sbla)
+        * [Presentation Layer](#pl)
+        * [Business Layer](#bl)
+        * [Persistence Layer](#pla)
+    * [Entity Objects](#eo)
+* [Application Programming Interface(API)](#api)
+* [Representational State Transfer(REST)](#rest)
+    * [REST API](#restapi)
+
+<a name="springframework"></a>
 # Spring Framework
 
 &nbsp;  **Spring Framework** is an open source application framework which is leightweight has been designed by **Rod Johnson** and first version released in 2003.
@@ -6,7 +28,7 @@
 
 &nbsp;  **The reason for the emergence of the Spring Framework** is that Java EE (new name Jakarta EE), which was widely used before the Spring Framework, has a very complex application development environment and a deep Java EE learning requirement due to this complexity. The fact that these requirements also increase the management cost of the applications has ensured that the Spring Framework has been kept in a short time against to Java EE.
 
-
+<a name="why"></a>
 ### The brief reasons why the Spring Framework is so popular and used are;
  * It uses POJO(Plain Old Java Object), don’t need an enterprise container like an application server.
  * It's is Inversion of Control (IoC) and Dependency Injection (DI) features provide the foundation for a wide-ranging set of features and functionality.
@@ -14,7 +36,9 @@
  * Well-Designed Web Framework.
  * Spring application code tends to be very easy to make test cases for various testings.
  * Middle-tier objects can be easily organized.
- 
+
+<a name="pojo"></a>
+
 #### Plain Old Java Object(POJO) in Briefly
 &nbsp; POJO is an ordinary object that is not subject to any special restrictions.
 The POJO class does not have connections with another class, such as extends, implements.
@@ -31,19 +55,23 @@ Some Properties of POJO
  
  A Code Example of POJO </br>
 --------------------------------- </br>
-*public class Human{*  </br>
-*private String name;*  
-*private String lastName;*  
-*private int age;* 
+```java
+public class Human{
+    private String name; 
+    private String lastName;  
+    private int age;
 
-*public String getName() {  return name;  }*  
-*public void setName(String name) {  this.name = name;  }*  
-*public String getlastName() {   return lastName;  }*  
-*public void setLastName(String lastName) {   this.lastName = lastName;  }*  
-*public int getage() {  return age;  }*  
-*public void setAge(int age) {  this.age = age;  }*
-*}*</br>
+    public String getName() {  return name;  } 
+    public void setName(String name) {  this.name = name;  } 
+    public String getlastName() {   return lastName;  }  
+    public void setLastName(String lastName) {   this.lastName = lastName;  }
+    public int getage() {  return age;  }
+    public void setAge(int age) {  this.age = age;  }
+}
+```
 --------------------------------- </br>
+
+<a name="ioc"></a>
 
 #### Inversion of Control(IoC) in Briefly </br>
 When a class uses another class, the class controls the another class.</br>
@@ -56,6 +84,8 @@ In this way, we can set the save behavior of any desired object wanted to use th
 That is called Dependency Injection principle.</br>
 Other ideas for implementing the IoC paradigm apart from Dependency Injection are Strategy Design Pattern, Service Lacator Design Pattern and Factory Design Pattern. </br>
 
+<a name="sioc"></a>
+
 #### Spring's IoC Container in Briefly
 Some of classes are used to carry data, while some of classes are used for their functionality. </br>
 It is usually sufficient for us to generate only unique an object from the classes we use for their functionality (in this way, the object generation design is called Singleton Design Pattern). </br>
@@ -64,6 +94,8 @@ Singleton objects whose functionality we want to use over and over again are pla
 When the objects placed in the IoC Container are desired to be used, a reference is assigned to the relevant field with the Dependency Injection principle.</br>
 In this way, the objects that we want to use for their functionality are not constantly reproduced. </br>
 The @Autowired annotation is usually used for the Dependency Injection method in Spring. With the @Autowired annotation, the address of the required object is taken from the memory and a reference is assigned to the required field. </br>
+
+<a name="di"></a>
 
 #### Dependency Injection(DI) in Briefly </br>
 Dependency Injection is the last of the principles of SOLID. </br>
@@ -74,49 +106,74 @@ Dependency Injection must take the control of the creating and etc. of needed ob
 This means that DI uses the IoC paradigsm.</br>
 
 ##### Injection can be done in 3 different ways in Dependency Injection
+<a name="dic"></a>
+
  * **Constructor Dependency Injection:** Needed class is provided through the dependency class' constructor. </br>
  --------------------------------- </br>
-*public class Controller{*  </br>
-*private IServices service;* </br>
-*public Controller(IServices service) {* </br>
-&nbsp; *this.service=service; }*</br>
-*}* </br>
+ ```java
+public class Controller{
+    private IServices service;
+    public Controller(IServices service) {
+        this.service=service;
+    }
+}
+```
 --------------------------------- </br>
+<a name="dip"></a>
+
  * **Property(or Setter) Dependency Injection:** The injector supplies the needed object(s) through a public property of the dependency class. </br>
  --------------------------------- </br>
-*public class Controller{* </br>
-*private IServices service;* </br>
-*public Controller() {}*   </br>
-*public IServices getService() {* </br>
-&nbsp; *return this.service; }*</br>
-*public void setService(IServices service) {* </br>
-&nbsp; *this.service=service; }*</br>
-*}* </br>
+ ```java
+public class Controller{
+    private IServices service;
+
+    public Controller() {}
+
+    public IServices getService() {
+        return this.service;
+    }
+    public void setService(IServices service) { 
+        this.service=service
+    }
+}
+```
 --------------------------------- </br>
+<a name="dii"></a>
+
  * **Interface(or Method) Dependency Injection:** Provides a method that will pass the transmission of the needed object(s) to any dependent class.
 Dependent classes must implement the interface which have the setter method of the object(s) they need.</br>
  --------------------------------- </br>
-*public interface IServicesDependency{*  </br>
-*void setDependecy(IServices service);*  </br>
-*}*                                      </br>
-*public class Controller implements IServicesDependency{* </br>
-*private IServices service;* </br>
-*public Controller() {}*   </br>
-*@Override*                  </br>
-*public void setDependecy(IServices service) {* </br>
-&nbsp; *this.service=service; }*</br>
-*}* </br>
+ ```java
+public interface IServicesDependency{
+    void setDependecy(IServices service);
+}
+public class Controller implements IServicesDependency{
+    private IServices service;
+
+    public Controller() {}
+
+    @Override
+    public void setDependecy(IServices service) {
+        this.service=service;
+    }
+}
+```
 --------------------------------- </br>
+<a name="dif"></a>
+
  * **[Bonus] Field Dependency Injection:** Field Injection is a DI technique made thanks to the @Autowired annotation in Spring.
 In fact, Field Injection was mentioned indirectly while explaining the IoC Container.
 Dependent object takes the memory address of the needed object that already exists in the IoC Container and assigns the reference address to  related field belong to dependent object thanks to @Autowired annotation.</br>
  --------------------------------- </br>
-*public class Controller{*  </br>
-*@Autowired* </br>
-*private IServices service;* </br>
-*public Controller() {}* </br>
-*}* </br>
+```java
+public class Controller{
+    @Autowired
+    private IServices service;
+    public Controller() {}
+}
+```
 --------------------------------- </br>
+<a name="springboot"></a>
 
 ### Spring Boot
 &nbsp; The main difference between Spring Framework and Spring Boot is that Spring Framework is a library and Spring Boot is a tool.
@@ -129,26 +186,37 @@ A few features of Spring Boot that make it faster and easier
  * SB is easy to start.
  * Customization and management is simple.
  
+ <a name="sbla"></a>
+
  ### Spring Boot Layered Architecture
 &nbsp; This is used architectural structure in Spring Boot.
 In layered artichecture, classes are divided into certain groups/layers and each divided group/layer has its own task.
 The reason why the file structures are arranged in this way is that the reusability, maintainability and debugability of the projects(especially the complex ones) can be controlled and updated in a right way. </br>
 
+<a name="pl"></a>
+
 The first of these layers is the **Presentation Layer** </br>
 &nbsp; The Presentation Layer communicates with the client. The **@RestController** or **@Controller** annotations are used to indicate that the classes in the Presentation Layer belong to that layer. In this layer, requests(data) from the client are transferred to the next layer(Business Layer) via Database Transfer Objects(DTO) or data which is came from the Business Layer is returned to the client. </br>
+
+<a name="bl"></a>
 
 The second of these layers is the **Business Layer** </br>
 &nbsp; The Business Layer is the layer where the desired work is done. For example, calculating the discount of the price of the products in the cart, etc. in an e-commerce application.
 The **@Service** anonotation is used to indicate that the classes in the Business Layer belong to this layer.
 The desired solution is produced with the data transferred to it from the Presentation Layer via DTO in the Business layer. If the produced solution is needed to be returned directly to the client, it is returned to the Presentation layer with DTO in this layer. If the produced solution is needed to be saved in the database, it is transferred to the next layer (Persistence Layer) with Entity objects from this layer. </br>
 
+<a name="pla"></a>
+
 The third of these layers is the **Persistence Layer** </br>
 &nbsp; Persistence Layer communicates with the Database Layer. Hollow interfaces instead of classes are defined in this layer. Interfaces are defined with **@Repository** annotation in this layer. Spring makes the necessary implementations for the interfaces when it sees **@Repository** annotation and makes its interfaces with Repository annotation ready for use. Entity objects from the Business Layer are sent to the Database Layer or the data requested from the Database Layer are sent to the Business Layer as Entity objects in this layer. </br>
 Persistence Layer and Presentation Layer cannot communicate directly with each other! </br>
 
+<a name="eo"></a>
+
 **Entity Objects** </br>
 &nbsp; Entity objects are defined with **@Entity** annotation. An Entity class corresponds to a table in database.  For example, an AdminEntity class corresponds to the Admin table in the database. Fields defined with special annotations in Entity classes are created as columns in the database and the values of these fields are added/deleted or etc. to the relevant columns. </br>
 
+<a name="api"></a>
  
 ### Application Programming Interface(API)
 &nbsp;  APIs allow the functions of one application to be used in another application.
@@ -165,7 +233,9 @@ A few advantages of APIs
  * Contents can be automatically broadcast for each channel.
  * APIs makes service delivery more flexible.
  * Different versions of the same application can be developed on many different devices thanks to APIs.
- 
+
+<a name="rest"></a>
+
 ### Representational State Transfer(REST) 
 REST is an architecture that enables lightweight and easy Clint-Server communication with HTTP. </br>
 Roy Fielding developed this architecture as a doctoral thesis in the 2000s.</br>
@@ -174,6 +244,8 @@ If you want to get information from the http://theserver/example web address in 
 For example; GetUsers method</br>
 If you want to get information in Rest, you can directly access the related method with the variable web address logic.</br>
 For example; http://theserver/example/GetUser or http://theserver/example/GetUser/8.</br>
+
+<a name="restapi"></a>
 
 ### REST API
 &nbsp; A REST API is an API that conforms to the design principles or representative state transfer architecture style of REST.
@@ -195,5 +267,3 @@ This is similar to PUT but the body contains a set of instructions that explain 
 Therefore, PATCH body must not be just a modified part of the record but it must be in some kind of patch language like JSON Patch or XML Patch. </br>
 
 **DELETE** is used by the URI to delete an identified record. It returns a 200 (OK) HTTP status on successful a record deletion.
-
-
