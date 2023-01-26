@@ -98,7 +98,6 @@ The @Autowired annotation is usually used for the Dependency Injection method in
 <a name="di"></a>
 
 #### Dependency Injection(DI) in Briefly </br>
-Dependency Injection is the last of the principles of SOLID. </br>
 Dependency Injection is that needed object(s) inject to the dependent object when an object is dependent on another object(s). </br>
 The main purpose of using DI principle is that needed object(s) can changed without changing dependent object when the needed object(s) to be changed. </br>
 Likewise, when a change is made in the needed object(s), it is to prevent it from directly affecting dependent object. </br>
