@@ -20,6 +20,9 @@
 * [Representational State Transfer(REST)](#rest)
     * [REST API](#restapi)
 * [Challenge Project](#chpr)
+   * [Information about on Database](#db)
+   * [Request and Postman](#postman)
+   * [An output example from the Challenge Project](#output)
 
 <a name="springframework"></a>
 ## Spring Framework
@@ -300,19 +303,22 @@ Here is an example json object related to the data provided by this api;
     }
 }
 ```
-
-&nbsp; I first populated my own database using Alphavantage's API. The h2 database is currently used as the database. If you want to use the Postgresql database, you can remove the comment lines in the **application.properties** section and add the h2 database settings to the comment line.
+<a name="db"></a>
+&nbsp; First of all, I populated my own database using Alphavantage's API. If there is no data in the database, all the information is filling the database into the database while the loader object is being created. If our database is not empty then the loader object adds that data to our database if a new data was added to the Alphavantage API the previous day. The h2 database is currently used as the database.
+If you want to use the Postgresql as the database then you can remove the comment lines in the **application.properties** section and add the h2 database settings to the comment line.
 If the postgresql database is not installed on your computer, you can go to the **'src/main/recources'** directory and run the
 ```bash
 docker-compose -f docker-compose.yml up -d
 ```
 command to pull the postgresql image to your own computer.
 
-&nbsp; You can see stock prices by making date and company code based requests to this Rest API with Postman. You can go to the **'src/main/recources/PostmanCollection'** directory and import the json file there to your Postman and use the collections I have already prepared.
-An image from the Collections of Postman; </br>
-![UML]()
+<a name="postman"></a>
+&nbsp; You can see stock prices by making date and company code based requests to this Rest API with Postman. You can go to the **'src/main/recources/PostmanCollection'** directory and import the json file there to your Postman and use the collections I have already prepared. </br>
+An image from the Postman's Collections; </br>
+![UML](https://github.com/KeremTAN/Spring_JAVA/blob/main/ChallengeProject/src/main/resources/PostmanCollections/collections.png)
 
-An output example from the Challenge Project;
+<a name="output"></a>
+An output example from the Challenge Project; </br>
 ```json
 {
     "date": "2023-01-27",
