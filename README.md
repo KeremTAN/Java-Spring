@@ -1,3 +1,4 @@
+# JAVA Spring
 <!-- Lists -->
 * [Spring Framework](#springframework)
     * [The brief reasons why the Spring Framework is so popular and used are;](#why)
@@ -18,9 +19,10 @@
 * [Application Programming Interface(API)](#api)
 * [Representational State Transfer(REST)](#rest)
     * [REST API](#restapi)
+* [Challenge Project](#chpr)
 
 <a name="springframework"></a>
-# Spring Framework
+## Spring Framework
 
 &nbsp;  **Spring Framework** is an open source application framework which is leightweight has been designed by **Rod Johnson** and first version released in 2003.
 
@@ -39,7 +41,7 @@
 
 <a name="pojo"></a>
 
-#### Plain Old Java Object(POJO) in Briefly
+### Plain Old Java Object(POJO) in Briefly
 &nbsp; POJO is an ordinary object that is not subject to any special restrictions.
 The POJO class does not have connections with another class, such as extends, implements.
 POJO file does not require any special classpath. It increases the readability and reusability of a Java program.
@@ -73,7 +75,7 @@ public class Human{
 
 <a name="ioc"></a>
 
-#### Inversion of Control(IoC) in Briefly </br>
+### Inversion of Control(IoC) in Briefly </br>
 When a class uses another class, the class controls the another class.</br>
 For example, the save behavior of an object calls the save behavior of another object which is a component of the object which is created within itself in some situations. </br>
 In some cases, we want to take that control back into our own hands. </br>
@@ -86,7 +88,7 @@ Other ideas for implementing the IoC paradigm apart from Dependency Injection ar
 
 <a name="sioc"></a>
 
-#### Spring's IoC Container in Briefly
+### Spring's IoC Container in Briefly
 Some of classes are used to carry data, while some of classes are used for their functionality. </br>
 It is usually sufficient for us to generate only unique an object from the classes we use for their functionality (in this way, the object generation design is called Singleton Design Pattern). </br>
 IoC container is a kind of memory space in Spring. </br>
@@ -97,14 +99,14 @@ The @Autowired annotation is usually used for the Dependency Injection method in
 
 <a name="di"></a>
 
-#### Dependency Injection(DI) in Briefly </br>
+### Dependency Injection(DI) in Briefly </br>
 Dependency Injection is that needed object(s) inject to the dependent object when an object is dependent on another object(s). </br>
 The main purpose of using DI principle is that needed object(s) can changed without changing dependent object when the needed object(s) to be changed. </br>
 Likewise, when a change is made in the needed object(s), it is to prevent it from directly affecting dependent object. </br>
 Dependency Injection must take the control of the creating and etc. of needed object(s) for being able to do these. </br>
 This means that DI uses the IoC paradigsm.</br>
 
-##### Injection can be done in 3 different ways in Dependency Injection
+### Injection can be done in 3 different ways in Dependency Injection
 <a name="dic"></a>
 
  * **Constructor Dependency Injection:** Needed class is provided through the dependency class' constructor. </br>
@@ -174,7 +176,7 @@ public class Controller{
  --------------------------------- 
 <a name="springboot"></a>
 
-### Spring Boot
+## Spring Boot
 &nbsp; The main difference between Spring Framework and Spring Boot is that Spring Framework is a library and Spring Boot is a tool.
 Spring Boot makes it faster and easier to develop applications with the Spring Framework. </br></br>
 A few features of Spring Boot that make it faster and easier 
@@ -217,7 +219,7 @@ Persistence Layer and Presentation Layer cannot communicate directly with each o
 
 <a name="api"></a>
  
-### Application Programming Interface(API)
+## Application Programming Interface(API)
 &nbsp;  APIs allow the functions of one application to be used in another application.
 In this way, applications can be run that are independent of each other in an integrated way.
 In this respect, the APIs are like a puzzle.
@@ -235,7 +237,7 @@ A few advantages of APIs
 
 <a name="rest"></a>
 
-### Representational State Transfer(REST) 
+## Representational State Transfer(REST) 
 REST is an architecture that enables lightweight and easy Clint-Server communication with HTTP. </br>
 Roy Fielding developed this architecture as a doctoral thesis in the 2000s.</br>
 REST allows communication with a variable URL rather than a constant URL as in Simple Object Access Protocol (SOAP).</br>
@@ -266,3 +268,60 @@ This is similar to PUT but the body contains a set of instructions that explain 
 Therefore, PATCH body must not be just a modified part of the record but it must be in some kind of patch language like JSON Patch or XML Patch. </br>
 
 **DELETE** is used by the URI to delete an identified record. It returns a 200 (OK) HTTP status on successful a record deletion.
+
+
+<a name="chpr"></a>
+
+## Challenge Project
+
+ &nbsp; I have developed a Rest API where you can see the stock market share prices of companies which are done in the Challenge Project module. I got stock markets information from https://www.alphavantage.co/documentation/. </br>
+Here is an example json object related to the data provided by this api;
+```json
+{
+    "Meta Data": {
+        "1. Information": "Daily Time Series with Splits and Dividend Events",
+        "2. Symbol": "IBM",
+        "3. Last Refreshed": "2023-01-27",
+        "4. Output Size": "Compact",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2023-01-27": {
+            "1. open": "134.44",
+            "2. high": "135.488",
+            "3. low": "133.7701",
+            "4. close": "134.39",
+            "5. adjusted close": "134.39",
+            "6. volume": "8143146",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0"
+        },
+        ...
+    }
+}
+```
+
+&nbsp; I first populated my own database using Alphavantage's API. The h2 database is currently used as the database. If you want to use the Postgresql database, you can remove the comment lines in the **application.properties** section and add the h2 database settings to the comment line.
+If the postgresql database is not installed on your computer, you can go to the **'src/main/recources'** directory and run the
+```bash
+docker-compose -f docker-compose.yml up -d
+```
+command to pull the postgresql image to your own computer.
+
+&nbsp; You can see stock prices by making date and company code based requests to this Rest API with Postman. You can go to the **'src/main/recources/PostmanCollection'** directory and import the json file there to your Postman and use the collections I have already prepared.
+An image from the Collections of Postman; </br>
+![UML]()
+
+An output example from the Challenge Project;
+```json
+{
+    "date": "2023-01-27",
+    "symbol": "IBM",
+    "1. open": "134.44",
+    "2. high": "135.488",
+    "3. low": "133.7701",
+    "4. close": "134.39",
+    "5. adjusted close": "134.39",
+    "6. volume": "8143146"
+}
+```
